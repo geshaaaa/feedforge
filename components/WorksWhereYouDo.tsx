@@ -74,7 +74,7 @@ export default function WorksWhereYouDo() {
                       key={index}
                       className="flex-shrink-0 px-4"
                     >
-                      <div className="flex h-10 w-20 items-center justify-center border border-gray-200 bg-gray-50 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-teal hover:bg-teal/5 hover:text-teal">
+                      <div className="flex h-10 w-20 items-center justify-center border border-gray-200 bg-gray-50 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-gray-900 hover:bg-gray-100 hover:text-gray-900">
                         {logo}
                       </div>
                     </div>
@@ -89,7 +89,7 @@ export default function WorksWhereYouDo() {
                       key={index}
                       className="flex-shrink-0 px-4"
                     >
-                      <div className="flex h-10 w-20 items-center justify-center border border-gray-200 bg-gray-50 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-teal hover:bg-teal/5 hover:text-teal">
+                      <div className="flex h-10 w-20 items-center justify-center border border-gray-200 bg-gray-50 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-gray-900 hover:bg-gray-100 hover:text-gray-900">
                         {logo}
                       </div>
                     </div>
@@ -116,9 +116,9 @@ export default function WorksWhereYouDo() {
               {enterpriseFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="group flex h-28 w-36 flex-col items-center justify-center border border-gray-200 bg-white p-3 text-center transition-all duration-300 hover:border-teal hover:shadow-md"
+                  className="group flex h-28 w-36 flex-col items-center justify-center border border-gray-200 bg-white p-3 text-center transition-all duration-300 hover:border-gray-900 hover:shadow-md"
                 >
-                  <div className="mb-2 flex h-5 w-5 items-center justify-center text-gray-900 transition-colors group-hover:text-teal">
+                  <div className="mb-2 flex h-5 w-5 items-center justify-center text-gray-900 transition-colors group-hover:text-gray-900">
                     {feature.icon}
                   </div>
                   <h3 className="mb-1 text-xs font-bold text-gray-900">{feature.title}</h3>

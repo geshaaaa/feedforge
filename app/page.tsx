@@ -5,9 +5,11 @@ import StatsBanner from '@/components/StatsBanner'
 import SearchChanging from '@/components/SearchChanging'
 import SimpleProcess from '@/components/SimpleProcess'
 import BuiltForTeams from '@/components/BuiltForTeams'
+import ComplexTechnology from '@/components/ComplexTechnology'
 import CatalogPerfection from '@/components/CatalogPerfection'
 import WorksWhereYouDo from '@/components/WorksWhereYouDo'
 import StartBuilding from '@/components/StartBuilding'
+import ReadyToScale from '@/components/ReadyToScale'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -20,9 +22,11 @@ export default function Home() {
       <SearchChanging />
       <SimpleProcess />
       <BuiltForTeams />
+      <ComplexTechnology />
       <CatalogPerfection />
       <WorksWhereYouDo />
       <StartBuilding />
+      <ReadyToScale />
       <Footer />
     </main>
   )

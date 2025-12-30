@@ -44,10 +44,10 @@ export default function UseCases() {
         {useCases.map((useCase, index) => (
           <div
             key={index}
-            className="group relative overflow-hidden rounded-lg border border-gray-200 bg-white p-8 transition-all duration-700 ease-in-out hover:border-teal hover:shadow-xl hover:-translate-y-1"
+            className="group relative overflow-hidden rounded-lg border border-gray-200 bg-white p-8 transition-all duration-700 ease-in-out hover:border-gray-900 hover:shadow-xl hover:-translate-y-1"
           >
             <div className="mb-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-teal">
+              <span className="text-xs font-semibold uppercase tracking-wider text-gray-900">
                 USE CASE: {useCase.label}
               </span>
             </div>
@@ -82,11 +82,11 @@ export default function UseCases() {
             )}
 
             {/* Subtle background effect on hover */}
-            <div className="absolute inset-0 -z-10 bg-gradient-to-br from-teal/0 to-teal/0 transition-all duration-700 ease-in-out group-hover:from-teal/5 group-hover:to-teal/0" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-br from-gray-900/0 to-gray-900/0 transition-all duration-700 ease-in-out group-hover:from-gray-900/5 group-hover:to-gray-900/0" />
             
             {/* Border glow effect on hover */}
             <div className="absolute inset-0 -z-10 rounded-lg opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100">
-              <div className="absolute inset-0 rounded-lg bg-teal/10 blur-xl" />
+              <div className="absolute inset-0 rounded-lg bg-gray-900/10 blur-xl" />
             </div>
           </div>
         ))}

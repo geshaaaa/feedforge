@@ -59,7 +59,7 @@ export default function RelevanceDelivered() {
     return (
       <>
         {parts[0]}
-        <span className="underline decoration-teal underline-offset-2">{underlined}</span>
+        <span className="underline decoration-gray-900 underline-offset-2">{underlined}</span>
         {parts[1]}
       </>
     )
@@ -86,9 +86,9 @@ export default function RelevanceDelivered() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group aspect-square rounded-lg border border-gray-200 bg-white p-4 transition-all duration-500 ease-in-out hover:border-teal/50 hover:shadow-md hover:-translate-y-1"
+              className="group aspect-square rounded-lg border border-gray-200 bg-white p-4 transition-all duration-500 ease-in-out hover:border-gray-500 hover:shadow-md hover:-translate-y-1"
             >
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-600 transition-all duration-500 group-hover:border-teal/50 group-hover:bg-teal/5 group-hover:text-teal">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-600 transition-all duration-500 group-hover:border-gray-500 group-hover:bg-gray-100 group-hover:text-gray-900">
                 <div className="h-5 w-5">{feature.icon}</div>
               </div>
               <h3 className="mb-2 text-base font-semibold text-gray-900">
@@ -101,7 +101,7 @@ export default function RelevanceDelivered() {
           ))}
 
           {/* Call to Action Card */}
-          <div className="group aspect-square rounded-lg border border-gray-200 bg-white p-4 transition-all duration-500 ease-in-out hover:border-teal/50 hover:shadow-md hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+          <div className="group aspect-square rounded-lg border border-gray-200 bg-white p-4 transition-all duration-500 ease-in-out hover:border-gray-500 hover:shadow-md hover:-translate-y-1 md:col-span-2 lg:col-span-1">
             <div className="mb-3">
               <p className="text-xs leading-relaxed text-gray-600">
                 Learn how to achieve <strong className="font-semibold text-gray-900">best-in-class relevance</strong> with cascading retrieval

@@ -54,8 +54,8 @@ export default function SimpleProcess() {
         {/* Header */}
         <div className="mb-12 text-center">
           <div className="mb-4 flex items-center justify-center gap-2">
-            <div className="h-2 w-2 bg-teal"></div>
-            <span className="text-sm font-medium text-teal">Simple Process</span>
+            <div className="h-2 w-2 bg-gray-900"></div>
+            <span className="text-sm font-medium text-gray-900">Simple Process</span>
           </div>
           <h2 className="mb-4 font-serif text-4xl font-bold text-gray-900 lg:text-5xl">
             Powerful Results, Simple Process
@@ -80,15 +80,15 @@ export default function SimpleProcess() {
                       {/* Vertical Line */}
                       <div className="absolute top-full h-16 w-px bg-gray-300"></div>
                       {/* Icon Container */}
-                      <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-gray-300 bg-white transition-all duration-300 hover:border-teal hover:bg-teal/5">
-                        <div className="text-teal transition-colors duration-300">
+                      <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-gray-300 bg-white transition-all duration-300 hover:border-gray-900 hover:bg-gray-50">
+                        <div className="text-gray-900 transition-colors duration-300">
                           {step.icon}
                         </div>
                       </div>
                     </div>
                     
                     {/* Node on Horizontal Line */}
-                    <div className="absolute top-1/2 z-20 h-3 w-3 -translate-y-1/2 rounded-full bg-teal"></div>
+                    <div className="absolute top-1/2 z-20 h-3 w-3 -translate-y-1/2 rounded-full bg-gray-900"></div>
                     
                     {/* Text Label Below */}
                     <div className="relative z-10 mt-8 flex flex-col items-center text-left">
@@ -105,15 +105,15 @@ export default function SimpleProcess() {
                     </div>
                     
                     {/* Node on Horizontal Line */}
-                    <div className="absolute top-1/2 z-20 h-3 w-3 -translate-y-1/2 rounded-full bg-teal"></div>
+                    <div className="absolute top-1/2 z-20 h-3 w-3 -translate-y-1/2 rounded-full bg-gray-900"></div>
                     
                     {/* Icon Container Below */}
                     <div className="relative mt-8 flex flex-col items-center">
                       {/* Vertical Line */}
                       <div className="absolute bottom-full h-16 w-px bg-gray-300"></div>
                       {/* Icon Container */}
-                      <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-gray-300 bg-white transition-all duration-300 hover:border-teal hover:bg-teal/5">
-                        <div className="text-teal transition-colors duration-300">
+                      <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-gray-300 bg-white transition-all duration-300 hover:border-gray-900 hover:bg-gray-50">
+                        <div className="text-gray-900 transition-colors duration-300">
                           {step.icon}
                         </div>
                       </div>

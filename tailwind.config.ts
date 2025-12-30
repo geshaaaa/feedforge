@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'teal': '#069494',
-        'teal-dark': '#057575',
+        'teal': '#1f2937',
+        'teal-dark': '#111827',
       },
       fontFamily: {
         serif: ['var(--font-playfair)', 'serif'],
@@ -24,10 +24,15 @@ const config: Config = {
           '0%': { transform: 'translateX(-33.333%)' },
           '100%': { transform: 'translateX(0)' },
         },
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
       },
       animation: {
         scroll: 'scroll 30s linear infinite',
         'scroll-reverse': 'scroll-reverse 30s linear infinite',
+        bounce: 'bounce 2s ease-in-out infinite',
       },
     },
   },
