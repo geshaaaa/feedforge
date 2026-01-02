@@ -9,15 +9,22 @@ export default function Hero() {
         {/* Left Column - Value Proposition */}
         <div className="flex flex-col justify-center">
           <div className="mb-4">
-            <span className="text-sm font-semibold uppercase tracking-wider text-gray-900">
-              Build Knowledgeable AI
+            <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-100 px-3 py-1 text-xs font-medium text-gray-900">
+              <span className="h-1.5 w-1.5 rounded-full bg-gray-900"></span>
+              AI-native feeds for search, ads & agents
             </span>
           </div>
           
-          <h1 className="mb-8 font-serif text-3xl font-bold leading-tight text-gray-900 lg:text-4xl xl:text-5xl">
-            The vector database for{' '}
-            <span className="text-gray-900">scale in production</span>
+          <h1 className="mb-4 font-serif text-3xl font-bold leading-tight text-gray-900 lg:text-4xl xl:text-5xl">
+            Revenue, Automated
           </h1>
+
+          <p className="mb-8 text-sm text-gray-600">
+            Transform your product catalog into AI-ready listings that perform
+            across traditional channels (Google, Meta, marketplaces) and next-
+            generation search (ChatGPT, Perplexity, AI Overviews), with measurable
+            results.
+          </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">
             <button className="relative border border-gray-900 bg-gray-900 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800">

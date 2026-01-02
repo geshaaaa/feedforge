@@ -9,7 +9,7 @@ import ComplexTechnology from '@/components/ComplexTechnology'
 import CatalogPerfection from '@/components/CatalogPerfection'
 import WorksWhereYouDo from '@/components/WorksWhereYouDo'
 import StartBuilding from '@/components/StartBuilding'
-import ReadyToScale from '@/components/ReadyToScale'
+import DemoRequest from '@/components/DemoRequest'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -25,8 +25,8 @@ export default function Home() {
       <ComplexTechnology />
       <CatalogPerfection />
       <WorksWhereYouDo />
+      <DemoRequest />
       <StartBuilding />
-      <ReadyToScale />
       <Footer />
     </main>
   )

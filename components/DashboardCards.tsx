@@ -7,9 +7,17 @@ export default function DashboardCards() {
       <div className="aspect-square border border-gray-200 bg-white p-2 shadow-sm overflow-hidden transition-all duration-300 hover:border-gray-900 hover:shadow-md hover:-translate-y-1">
         <div className="mb-1 flex items-center justify-between">
           <h3 className="text-xs font-semibold text-gray-900">Search Visibility</h3>
-          <a href="#" className="text-[10px] text-gray-500 hover:text-gray-900">
-            Analysis &gt;
-          </a>
+          <div className="flex items-center gap-1">
+            <a href="#" className="text-[10px] text-gray-500 hover:text-gray-900">
+              Analysis &gt;
+            </a>
+            <button className="text-gray-900 hover:text-gray-600">
+              <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" fill="currentColor" />
+                <text x="12" y="16" textAnchor="middle" fontSize="10" fill="white">i</text>
+              </svg>
+            </button>
+          </div>
         </div>
         <div className="relative mb-1 flex items-center justify-center">
           <svg className="h-20 w-20" viewBox="0 0 100 100">
@@ -40,8 +48,8 @@ export default function DashboardCards() {
             />
           </svg>
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <div className="text-base font-bold text-gray-900">+27%</div>
-            <div className="mt-1 text-[10px] font-medium text-gray-900">Optimization Lift</div>
+            <div className="text-xs font-bold text-gray-900">+27%</div>
+            <div className="mt-0.5 text-[8px] font-medium text-gray-900">Optimization Lift</div>
           </div>
         </div>
         <div className="flex items-center justify-between text-[10px] text-gray-600 mb-1">
@@ -65,9 +73,9 @@ export default function DashboardCards() {
             </div>
             <h3 className="text-xs font-semibold text-gray-900">Active Channels</h3>
           </div>
-          <button className="text-gray-400 hover:text-gray-600">
+          <button className="text-gray-900 hover:text-gray-600">
             <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="10" fill="currentColor" />
               <text x="12" y="16" textAnchor="middle" fontSize="10" fill="white">i</text>
             </svg>
           </button>
@@ -92,9 +100,9 @@ export default function DashboardCards() {
             </div>
             <h3 className="text-xs font-semibold text-gray-900">Processed SKUs</h3>
           </div>
-          <button className="text-gray-400 hover:text-gray-600">
+          <button className="text-gray-900 hover:text-gray-600">
             <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="10" fill="currentColor" />
               <text x="12" y="16" textAnchor="middle" fontSize="10" fill="white">i</text>
             </svg>
           </button>
@@ -143,16 +151,16 @@ export default function DashboardCards() {
             />
           </svg>
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <div className="mb-0.5 flex h-6 w-6 items-center justify-center">
-              <svg className="h-4 w-4 text-gray-900" viewBox="0 0 24 24" fill="currentColor">
+            <div className="mb-0.5 flex h-4 w-4 items-center justify-center">
+              <svg className="h-3 w-3 text-gray-900" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
               </svg>
             </div>
             <div className="flex items-baseline gap-0.5">
-              <span className="text-base font-bold text-gray-900">82</span>
-              <span className="text-xs text-gray-500">/100</span>
+              <span className="text-xs font-bold text-gray-900">82</span>
+              <span className="text-[9px] text-gray-500">/100</span>
             </div>
-            <div className="mt-1 text-[10px] text-gray-500">Live Beta Score</div>
+            <div className="mt-0.5 text-[8px] text-gray-500">Live Beta Score</div>
           </div>
         </div>
       </div>
