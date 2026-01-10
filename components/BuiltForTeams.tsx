@@ -55,7 +55,7 @@ export default function BuiltForTeams() {
           <span className="text-sm font-medium text-gray-900">Designed for Teams</span>
         </div>
         
-        <h2 className="mb-4 text-center font-serif text-4xl font-bold text-gray-900 lg:text-5xl">
+        <h2 className="mb-4 text-center text-4xl font-bold text-gray-900 lg:text-5xl">
           Built for teams who live in product data
         </h2>
         

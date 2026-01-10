@@ -60,7 +60,7 @@ export default function ComplexTechnology() {
             </span>
           </div>
           
-          <h2 className="mb-4 font-serif text-4xl font-bold leading-tight text-gray-900 lg:text-5xl">
+          <h2 className="mb-4 text-4xl font-bold leading-tight text-gray-900 lg:text-5xl">
             Complex technology,{' '}
             <span className="text-gray-900">simple growth.</span>
           </h2>

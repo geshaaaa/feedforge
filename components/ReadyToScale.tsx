@@ -23,7 +23,7 @@ export default function ReadyToScale() {
           </button>
 
           {/* Main Heading */}
-          <h2 className="mb-6 font-serif text-5xl font-bold text-gray-900 lg:text-6xl">
+          <h2 className="mb-6 text-5xl font-bold text-gray-900 lg:text-6xl">
             ready to scale?
           </h2>
 

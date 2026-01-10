@@ -95,7 +95,7 @@ export default function StatsBanner() {
               <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
                 {stat.label}
               </div>
-              <div className="mb-2 font-serif text-5xl font-bold text-gray-900 lg:text-6xl">
+              <div className="mb-2 text-4xl font-bold text-gray-900 lg:text-5xl">
                 {stat.prefix}
                 {countedValues[index]}
                 {stat.suffix}

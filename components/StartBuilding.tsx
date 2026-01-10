@@ -19,7 +19,7 @@ export default function StartBuilding() {
         <div className="grid gap-3 lg:grid-cols-2 lg:items-center lg:gap-4">
           {/* Left Column */}
           <div>
-            <h2 className="mb-1 font-serif text-xl font-bold leading-tight text-gray-900 lg:text-2xl">
+            <h2 className="mb-1 text-xl font-bold leading-tight text-gray-900 lg:text-2xl">
               Start building knowledgeable AI today
             </h2>
             <p className="text-xs text-gray-600">

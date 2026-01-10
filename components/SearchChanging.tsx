@@ -6,8 +6,8 @@ const stats = [
     category: 'PERPLEXITY GROWTH',
     details: '3.8M to 1.3B visits in 2024',
     icon: (
-      <svg className="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+      <svg className="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
       </svg>
     ),
   },
@@ -16,8 +16,8 @@ const stats = [
     category: 'ZERO-CLICK SEARCHES',
     details: 'Answers without visiting sites',
     icon: (
-      <svg className="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      <svg className="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
   },
@@ -26,8 +26,8 @@ const stats = [
     category: 'CHATGPT WEEKLY USERS',
     details: 'Doubled from 400M in Feb 2025',
     icon: (
-      <svg className="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+      <svg className="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
       </svg>
     ),
   },
@@ -45,7 +45,7 @@ export default function SearchChanging() {
                 • MARKET SHIFT DETECTED
               </span>
             </div>
-            <h2 className="mb-4 font-serif text-4xl font-bold leading-tight text-gray-900 lg:text-5xl xl:text-6xl">
+            <h2 className="mb-4 text-4xl font-bold leading-tight text-gray-900 lg:text-5xl xl:text-6xl">
               Search is Changing.{' '}
               <span className="text-gray-900">Irreversibly Fast.</span>
             </h2>
@@ -61,8 +61,8 @@ export default function SearchChanging() {
                 key={index}
                 className="relative flex aspect-square w-48 items-center justify-center rounded-full border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-gray-900 hover:shadow-md hover:-translate-y-1"
               >
-                <div className="absolute right-4 top-4 opacity-20">
-                  <div className="h-4 w-4">{stat.icon}</div>
+                <div className="absolute right-6 top-6 z-10">
+                  <div className="h-6 w-6 text-gray-900">{stat.icon}</div>
                 </div>
                 <div className="flex flex-col items-center text-center">
                   <div className="mb-2 text-2xl font-bold text-gray-900 lg:text-3xl">
@@ -91,7 +91,7 @@ export default function SearchChanging() {
                   <span className="bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
                     THE CHALLENGE
                   </span>
-                  <h3 className="font-serif text-2xl font-bold text-gray-900">Legacy Keyword Strategy</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Legacy Keyword Strategy</h3>
                 </div>
               </div>
 
@@ -156,7 +156,7 @@ export default function SearchChanging() {
                   <span className="bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
                     THE SOLUTION
                   </span>
-                  <h3 className="font-serif text-2xl font-bold text-gray-900">AI-Native Optimization</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">AI-Native Optimization</h3>
                 </div>
               </div>
 

@@ -15,7 +15,7 @@ export default function Hero() {
             </span>
           </div>
           
-          <h1 className="mb-4 font-serif text-3xl font-bold leading-tight text-gray-900 lg:text-4xl xl:text-5xl">
+          <h1 className="mb-4 text-3xl font-bold leading-tight text-gray-900 lg:text-4xl xl:text-5xl">
             Revenue, Automated
           </h1>
 

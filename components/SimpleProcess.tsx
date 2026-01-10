@@ -57,7 +57,7 @@ export default function SimpleProcess() {
             <div className="h-2 w-2 bg-gray-900"></div>
             <span className="text-sm font-medium text-gray-900">Simple Process</span>
           </div>
-          <h2 className="mb-4 font-serif text-4xl font-bold text-gray-900 lg:text-5xl">
+          <h2 className="mb-4 text-4xl font-bold text-gray-900 lg:text-5xl">
             Powerful Results, Simple Process
           </h2>
           <p className="mx-auto max-w-2xl text-sm text-gray-600">

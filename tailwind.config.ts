@@ -14,6 +14,7 @@ const config: Config = {
       },
       fontFamily: {
         serif: ['var(--font-playfair)', 'serif'],
+        vector: ['var(--font-vector)', 'sans-serif'],
       },
       keyframes: {
         scroll: {

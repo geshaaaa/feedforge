@@ -26,7 +26,7 @@ export default function CatalogPerfection() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Column */}
           <div className="flex flex-col justify-center">
-            <h2 className="mb-4 font-serif text-4xl font-bold leading-tight text-gray-900 lg:text-5xl">
+            <h2 className="mb-4 text-4xl font-bold leading-tight text-gray-900 lg:text-5xl">
               instant catalog perfection
             </h2>
             
@@ -120,7 +120,7 @@ export default function CatalogPerfection() {
                       </div>
                       <div className="space-y-4 rounded-lg border border-gray-200 bg-gray-50 p-4 transition-all duration-500 hover:border-gray-300 hover:bg-gray-100 hover:shadow-md">
                         <div>
-                          <div className="mb-2 font-serif text-lg font-bold text-gray-900">
+                          <div className="mb-2 text-lg font-bold text-gray-900">
                             {exampleData.optimizedTitle}
                           </div>
                           <div className="mb-4 text-sm leading-relaxed text-gray-700">

@@ -54,7 +54,7 @@ export default function WorksWhereYouDo() {
           
           {/* Left Column - Works where you do */}
           <div>
-            <h2 className="mb-3 font-serif text-3xl font-bold text-gray-900 lg:text-4xl">
+            <h2 className="mb-3 text-3xl font-bold text-gray-900 lg:text-4xl">
               Works where you do
             </h2>
             <p className="mb-4 text-sm text-gray-600">
@@ -101,7 +101,7 @@ export default function WorksWhereYouDo() {
 
           {/* Right Column - Enterprise-ready AI */}
           <div>
-            <h2 className="mb-3 font-serif text-3xl font-bold text-gray-900 lg:text-4xl">
+            <h2 className="mb-3 text-3xl font-bold text-gray-900 lg:text-4xl">
               Enterprise-ready AI
             </h2>
             <p className="mb-4 text-sm text-gray-600">
