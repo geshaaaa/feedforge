@@ -45,7 +45,7 @@ export default function SearchChanging() {
                 • MARKET SHIFT DETECTED
               </span>
             </div>
-            <h2 className="mb-4 text-4xl font-bold leading-tight text-gray-900 lg:text-5xl xl:text-6xl">
+            <h2 className="mb-4 text-3xl font-bold leading-tight text-gray-900 lg:text-4xl xl:text-5xl">
               Search is Changing.{' '}
               <span className="text-accent">Irreversibly Fast.</span>
             </h2>
@@ -65,7 +65,7 @@ export default function SearchChanging() {
                   <div className="h-6 w-6 text-gray-900">{stat.icon}</div>
                 </div>
                 <div className="flex flex-col items-center text-center">
-                  <div className="mb-2 text-2xl font-bold text-gray-900 lg:text-3xl">
+                  <div className="mb-2 text-xl font-bold text-gray-900 lg:text-2xl">
                     {stat.value}
                   </div>
                   <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-900">
@@ -91,7 +91,7 @@ export default function SearchChanging() {
                   <span className="bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
                     THE CHALLENGE
                   </span>
-                  <h3 className="text-2xl font-bold text-gray-900">Legacy Keyword Strategy</h3>
+                  <h3 className="text-xl font-bold text-gray-900">Legacy Keyword Strategy</h3>
                 </div>
               </div>
 
@@ -156,7 +156,7 @@ export default function SearchChanging() {
                   <span className="bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
                     THE SOLUTION
                   </span>
-                  <h3 className="text-2xl font-bold text-gray-900">AI-Native Optimization</h3>
+                  <h3 className="text-xl font-bold text-gray-900">AI-Native Optimization</h3>
                 </div>
               </div>
 

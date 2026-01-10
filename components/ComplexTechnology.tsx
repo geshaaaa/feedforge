@@ -60,7 +60,7 @@ export default function ComplexTechnology() {
             </span>
           </div>
           
-          <h2 className="mb-4 text-4xl font-bold leading-tight text-gray-900 lg:text-5xl">
+          <h2 className="mb-4 text-3xl font-bold leading-tight text-gray-900 lg:text-4xl">
             Complex technology,{' '}
             <span className="text-accent">simple growth.</span>
           </h2>
@@ -77,8 +77,8 @@ export default function ComplexTechnology() {
               key={index}
               className={`group relative border bg-white p-4 transition-all duration-300 ${
                 feature.highlighted
-                  ? 'border-accent shadow-sm'
-                  : 'border-gray-200 hover:border-accent hover:shadow-md'
+                  ? 'border-gray-900 shadow-sm'
+                  : 'border-gray-200 hover:border-gray-900 hover:shadow-md'
               }`}
             >
               <div className="flex flex-col">
@@ -86,15 +86,15 @@ export default function ComplexTechnology() {
                 <div
                   className={`mb-3 flex h-10 w-10 items-center justify-center transition-colors duration-300 ${
                     feature.highlighted
-                      ? 'bg-accent text-white'
-                      : 'bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white'
+                      ? 'bg-gray-900 text-white'
+                      : 'bg-gray-100 text-gray-900 group-hover:bg-gray-900 group-hover:text-white'
                   }`}
                 >
                   {feature.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-1 text-base font-bold text-accent">
+                <h3 className="mb-1 text-base font-bold text-gray-900">
                   {feature.title}
                 </h3>
 
@@ -105,7 +105,7 @@ export default function ComplexTechnology() {
 
                 {/* Progress Bar / Underline for highlighted feature */}
                 {feature.highlighted && (
-                  <div className="h-0.5 w-2/3 bg-accent transition-all duration-300 group-hover:w-full"></div>
+                  <div className="h-0.5 w-2/3 bg-gray-900 transition-all duration-300 group-hover:w-full"></div>
                 )}
               </div>
             </div>

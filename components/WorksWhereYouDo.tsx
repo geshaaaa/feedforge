@@ -54,13 +54,13 @@ export default function WorksWhereYouDo() {
           
           {/* Left Column - Works where you do */}
           <div>
-            <h2 className="mb-3 text-3xl font-bold text-gray-900 lg:text-4xl">
+            <h2 className="mb-3 text-2xl font-bold text-accent lg:text-3xl">
               Works where you do
             </h2>
             <p className="mb-4 text-sm text-gray-600">
               Use FeedForge with your favorite cloud provider, data sources, models, and frameworks.
             </p>
-            <button className="mb-6 border border-gray-300 bg-white px-4 py-2 text-xs font-medium text-gray-700 transition-colors hover:bg-gray-50">
+            <button className="mb-6 border border-accent bg-white px-4 py-2 text-xs font-medium text-accent transition-colors hover:bg-accent hover:text-white">
               Explore Integrations
             </button>
             
@@ -74,7 +74,7 @@ export default function WorksWhereYouDo() {
                       key={index}
                       className="flex-shrink-0 px-4"
                     >
-                      <div className="flex h-10 w-20 items-center justify-center border border-gray-200 bg-gray-50 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-gray-900 hover:bg-gray-100 hover:text-gray-900">
+                      <div className="flex h-10 w-20 items-center justify-center border border-gray-200 bg-gray-50 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent">
                         {logo}
                       </div>
                     </div>
@@ -89,7 +89,7 @@ export default function WorksWhereYouDo() {
                       key={index}
                       className="flex-shrink-0 px-4"
                     >
-                      <div className="flex h-10 w-20 items-center justify-center border border-gray-200 bg-gray-50 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-gray-900 hover:bg-gray-100 hover:text-gray-900">
+                      <div className="flex h-10 w-20 items-center justify-center border border-gray-200 bg-gray-50 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent">
                         {logo}
                       </div>
                     </div>
@@ -101,13 +101,13 @@ export default function WorksWhereYouDo() {
 
           {/* Right Column - Enterprise-ready AI */}
           <div>
-            <h2 className="mb-3 text-3xl font-bold text-gray-900 lg:text-4xl">
+            <h2 className="mb-3 text-2xl font-bold text-accent lg:text-3xl">
               Enterprise-ready AI
             </h2>
             <p className="mb-4 text-sm text-gray-600">
               Meet security and operational requirements to bring AI products to market faster.
             </p>
-            <button className="mb-6 border border-gray-300 bg-white px-4 py-2 text-xs font-medium text-gray-700 transition-colors hover:bg-gray-50">
+            <button className="mb-6 border border-accent bg-white px-4 py-2 text-xs font-medium text-accent transition-colors hover:bg-accent hover:text-white">
               View Security
             </button>
 
@@ -116,12 +116,12 @@ export default function WorksWhereYouDo() {
               {enterpriseFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="group flex h-28 w-36 flex-col items-center justify-center border border-gray-200 bg-white p-3 text-center transition-all duration-300 hover:border-gray-900 hover:shadow-md"
+                  className="group flex h-28 w-36 flex-col items-center justify-center border border-gray-200 bg-white p-3 text-center transition-all duration-300 hover:border-accent hover:shadow-md"
                 >
-                  <div className="mb-2 flex h-5 w-5 items-center justify-center text-gray-900 transition-colors group-hover:text-gray-900">
+                  <div className="mb-2 flex h-5 w-5 items-center justify-center text-accent transition-colors group-hover:text-accent">
                     {feature.icon}
                   </div>
-                  <h3 className="mb-1 text-xs font-bold text-gray-900">{feature.title}</h3>
+                  <h3 className="mb-1 text-xs font-bold text-accent">{feature.title}</h3>
                   <p className="text-[10px] leading-tight text-gray-600">{feature.description}</p>
                 </div>
               ))}

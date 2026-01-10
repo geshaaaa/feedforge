@@ -19,7 +19,7 @@ export default function StartBuilding() {
         <div className="grid gap-3 lg:grid-cols-2 lg:items-center lg:gap-4">
           {/* Left Column */}
           <div>
-            <h2 className="mb-1 text-xl font-bold leading-tight text-gray-900 lg:text-2xl">
+            <h2 className="mb-1 text-lg font-bold leading-tight text-gray-900 lg:text-xl">
               Start building knowledgeable AI today
             </h2>
             <p className="text-xs text-gray-600">
@@ -29,7 +29,7 @@ export default function StartBuilding() {
 
           {/* Right Column - Buttons */}
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-            <button className="bg-accent px-5 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#000fd9]">
+            <button className="bg-accent px-5 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#070066]">
               Start Building
             </button>
             <button className="border border-accent bg-white px-5 py-2 text-sm font-medium text-accent transition-colors duration-300 hover:bg-accent hover:text-white">
@@ -57,7 +57,7 @@ export default function StartBuilding() {
               />
               <button
                 type="submit"
-                className="border border-l-0 border-accent bg-accent px-6 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#000fd9]"
+                className="border border-l-0 border-accent bg-accent px-6 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#070066]"
               >
                 Subscribe
               </button>

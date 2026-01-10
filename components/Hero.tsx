@@ -15,7 +15,7 @@ export default function Hero() {
             </span>
           </div>
           
-          <h1 className="mb-4 text-3xl font-bold leading-tight text-gray-900 lg:text-4xl xl:text-5xl">
+          <h1 className="mb-4 text-2xl font-bold leading-tight text-gray-900 lg:text-3xl xl:text-4xl">
             Revenue, <span className="text-accent">Automated</span>
           </h1>
 
@@ -27,7 +27,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">
-            <button className="relative border border-accent bg-accent px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-[#000fd9]">
+            <button className="relative border border-accent bg-accent px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-[#070066]">
               {/* Corner markers */}
               <span className="absolute -left-1 -top-1 h-2 w-2 border-l-2 border-t-2 border-gray-900"></span>
               <span className="absolute -right-1 -top-1 h-2 w-2 border-r-2 border-t-2 border-gray-900"></span>

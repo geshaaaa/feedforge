@@ -73,7 +73,7 @@ export default function RelevanceDelivered() {
           <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-400">
             SEARCH
           </div>
-          <h2 className="mb-4 text-4xl font-bold text-gray-900 lg:text-5xl">
+          <h2 className="mb-4 text-3xl font-bold text-gray-900 lg:text-4xl">
             Relevance, delivered
           </h2>
           <p className="text-lg text-gray-600">

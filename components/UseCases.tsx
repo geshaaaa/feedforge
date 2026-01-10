@@ -32,7 +32,7 @@ export default function UseCases() {
     <section className="border-t border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
       <div className="mb-12 text-center">
-        <h2 className="mb-4 text-4xl font-bold text-gray-900 lg:text-5xl">
+        <h2 className="mb-4 text-3xl font-bold text-gray-900 lg:text-4xl">
           Trusted in production
         </h2>
         <p className="mx-auto max-w-2xl text-lg text-gray-600">
@@ -53,7 +53,7 @@ export default function UseCases() {
             </div>
 
             <div className="mb-6">
-              <div className="mb-4 text-2xl font-bold text-gray-900">
+              <div className="mb-4 text-xl font-bold text-gray-900">
                 {useCase.company}
               </div>
             </div>

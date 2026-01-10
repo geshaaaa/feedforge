@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         'teal': '#1f2937',
         'teal-dark': '#111827',
-        'accent': '#0012ff',
+        'accent': '#090088',
       },
       fontFamily: {
         serif: ['var(--font-playfair)', 'serif'],

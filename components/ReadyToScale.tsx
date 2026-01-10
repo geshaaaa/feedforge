@@ -23,7 +23,7 @@ export default function ReadyToScale() {
           </button>
 
           {/* Main Heading */}
-          <h2 className="mb-6 text-5xl font-bold text-gray-900 lg:text-6xl">
+          <h2 className="mb-6 text-4xl font-bold text-gray-900 lg:text-5xl">
             ready to scale?
           </h2>
 
@@ -37,7 +37,7 @@ export default function ReadyToScale() {
             <button className="border border-accent bg-white px-8 py-3 text-sm font-semibold uppercase tracking-wider text-accent transition-all duration-300 hover:bg-accent hover:text-white">
               START FREE 14-DAY TRIAL
             </button>
-            <button className="border border-accent bg-accent px-8 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#000fd9]">
+            <button className="border border-accent bg-accent px-8 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#070066]">
               TALK TO SALES
             </button>
           </div>

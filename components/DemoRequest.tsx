@@ -30,7 +30,7 @@ export default function DemoRequest() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Side - Form */}
           <div>
-            <h2 className="mb-6 text-3xl font-bold text-gray-900 lg:text-4xl">
+            <h2 className="mb-6 text-2xl font-bold text-gray-900 lg:text-3xl">
               Request a Demo
             </h2>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -94,7 +94,7 @@ export default function DemoRequest() {
 
               <button
                 type="submit"
-                className="w-full border border-accent bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#000fd9]"
+                className="w-full border border-accent bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#070066]"
               >
                 Submit Request
               </button>
@@ -114,7 +114,7 @@ export default function DemoRequest() {
               </span>
             </div>
 
-            <h3 className="mb-4 text-2xl font-bold text-gray-900 lg:text-3xl">
+            <h3 className="mb-4 text-xl font-bold text-gray-900 lg:text-2xl">
               See Feedforge in action
             </h3>
 
