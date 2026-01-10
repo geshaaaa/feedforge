@@ -6,7 +6,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="flex h-6 w-6 items-center justify-center bg-gray-900">
+          <div className="flex h-6 w-6 items-center justify-center bg-accent">
             <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
@@ -16,19 +16,19 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
-          <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">
+          <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
             Product
           </a>
-          <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">
+          <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
             Docs
           </a>
-          <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">
+          <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
             Customers
           </a>
-          <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">
+          <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
             Resources
           </a>
-          <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">
+          <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
             Pricing
           </a>
         </nav>
@@ -51,7 +51,7 @@ export default function Header() {
           <button className="flex h-10 items-center border border-r-0 border-gray-300 bg-white px-4 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50">
             Log in
           </button>
-          <button className="flex h-10 items-center border border-l-0 border-gray-900 bg-gray-900 px-4 text-sm font-medium text-white transition-colors hover:bg-gray-800">
+          <button className="flex h-10 items-center border border-l-0 border-accent bg-accent px-4 text-sm font-medium text-white transition-colors hover:bg-[#000fd9]">
             Sign up
           </button>
         </div>

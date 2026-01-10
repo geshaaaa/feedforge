@@ -94,7 +94,7 @@ export default function DemoRequest() {
 
               <button
                 type="submit"
-                className="w-full border border-gray-900 bg-gray-900 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-gray-800"
+                className="w-full border border-accent bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#000fd9]"
               >
                 Submit Request
               </button>

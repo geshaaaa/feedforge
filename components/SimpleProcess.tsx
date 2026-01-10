@@ -55,10 +55,10 @@ export default function SimpleProcess() {
         <div className="mb-12 text-center">
           <div className="mb-4 flex items-center justify-center gap-2">
             <div className="h-2 w-2 bg-gray-900"></div>
-            <span className="text-sm font-medium text-gray-900">Simple Process</span>
+            <span className="text-sm font-medium text-accent">Simple Process</span>
           </div>
           <h2 className="mb-4 text-4xl font-bold text-gray-900 lg:text-5xl">
-            Powerful Results, Simple Process
+            Powerful Results, <span className="text-accent">Simple Process</span>
           </h2>
           <p className="mx-auto max-w-2xl text-sm text-gray-600">
             Connect your data once. FeedForge automatically keeps it optimized for every sales channel. Your team gets time back to focus on strategy.
@@ -92,7 +92,7 @@ export default function SimpleProcess() {
                     
                     {/* Text Label Below */}
                     <div className="relative z-10 mt-8 flex flex-col items-center text-left">
-                      <h3 className="mb-1 text-sm font-bold text-gray-900">{step.title}</h3>
+                      <h3 className="mb-1 text-sm font-bold text-accent">{step.title}</h3>
                       <p className="text-xs text-gray-500 text-center">{step.description}</p>
                     </div>
                   </>
@@ -100,7 +100,7 @@ export default function SimpleProcess() {
                   <>
                     {/* Text Label Above */}
                     <div className="relative z-10 mb-8 flex flex-col items-center text-left">
-                      <h3 className="mb-1 text-sm font-bold text-gray-900">{step.title}</h3>
+                      <h3 className="mb-1 text-sm font-bold text-accent">{step.title}</h3>
                       <p className="text-xs text-gray-500 text-center">{step.description}</p>
                     </div>
                     

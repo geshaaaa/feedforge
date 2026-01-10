@@ -55,14 +55,14 @@ export default function ComplexTechnology() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
               </svg>
             </div>
-            <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-900">
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-accent">
               Next Generation Commerce
             </span>
           </div>
           
           <h2 className="mb-4 text-4xl font-bold leading-tight text-gray-900 lg:text-5xl">
             Complex technology,{' '}
-            <span className="text-gray-900">simple growth.</span>
+            <span className="text-accent">simple growth.</span>
           </h2>
           
           <p className="text-base text-gray-600">
@@ -77,8 +77,8 @@ export default function ComplexTechnology() {
               key={index}
               className={`group relative border bg-white p-4 transition-all duration-300 ${
                 feature.highlighted
-                  ? 'border-gray-900 shadow-sm'
-                  : 'border-gray-200 hover:border-gray-900 hover:shadow-md'
+                  ? 'border-accent shadow-sm'
+                  : 'border-gray-200 hover:border-accent hover:shadow-md'
               }`}
             >
               <div className="flex flex-col">
@@ -86,15 +86,15 @@ export default function ComplexTechnology() {
                 <div
                   className={`mb-3 flex h-10 w-10 items-center justify-center transition-colors duration-300 ${
                     feature.highlighted
-                      ? 'bg-gray-900 text-white'
-                      : 'bg-gray-100 text-gray-900 group-hover:bg-gray-900 group-hover:text-white'
+                      ? 'bg-accent text-white'
+                      : 'bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white'
                   }`}
                 >
                   {feature.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-1 text-base font-bold text-gray-900">
+                <h3 className="mb-1 text-base font-bold text-accent">
                   {feature.title}
                 </h3>
 
@@ -105,7 +105,7 @@ export default function ComplexTechnology() {
 
                 {/* Progress Bar / Underline for highlighted feature */}
                 {feature.highlighted && (
-                  <div className="h-0.5 w-2/3 bg-gray-900 transition-all duration-300 group-hover:w-full"></div>
+                  <div className="h-0.5 w-2/3 bg-accent transition-all duration-300 group-hover:w-full"></div>
                 )}
               </div>
             </div>

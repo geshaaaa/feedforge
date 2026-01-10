@@ -94,7 +94,7 @@ export default function Footer() {
         <div className="mb-6 flex flex-col items-center justify-between gap-4 md:flex-row md:items-center">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="flex h-6 w-6 items-center justify-center bg-gray-900">
+            <div className="flex h-6 w-6 items-center justify-center bg-accent">
               <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
               </svg>
@@ -108,7 +108,7 @@ export default function Footer() {
               <a
                 key={index}
                 href="#"
-                className="flex h-8 w-8 items-center justify-center border border-r-0 border-gray-200 bg-gray-50 text-gray-600 transition-all duration-300 first:rounded-l-lg last:rounded-r-lg last:border-r hover:border-gray-900 hover:bg-gray-100 hover:text-gray-900"
+                className="flex h-8 w-8 items-center justify-center border border-r-0 border-gray-200 bg-gray-50 text-accent transition-all duration-300 first:rounded-l-lg last:rounded-r-lg last:border-r hover:border-accent hover:bg-accent/10 hover:text-accent"
                 aria-label={social.name}
               >
                 <div className="h-4 w-4">{social.icon}</div>
@@ -127,7 +127,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-xs text-gray-900 transition-colors duration-300 hover:text-gray-900"
+                    className="text-xs text-gray-900 transition-colors duration-300 hover:text-accent"
                   >
                     {link}
                   </a>
@@ -169,7 +169,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-xs text-gray-900 transition-colors duration-300 hover:text-gray-900"
+                    className="text-xs text-gray-900 transition-colors duration-300 hover:text-accent"
                   >
                     {link}
                   </a>
@@ -186,7 +186,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-xs text-gray-900 transition-colors duration-300 hover:text-gray-900"
+                    className="text-xs text-gray-900 transition-colors duration-300 hover:text-accent"
                   >
                     {link}
                   </a>

@@ -107,7 +107,7 @@ export default function RelevanceDelivered() {
                 Learn how to achieve <strong className="font-semibold text-gray-900">best-in-class relevance</strong> with cascading retrieval
               </p>
             </div>
-            <button className="mt-3 rounded-md border border-gray-900 bg-white px-3 py-1.5 text-xs font-medium text-gray-900 transition-all duration-300 hover:bg-gray-900 hover:text-white">
+            <button className="mt-3 rounded-md border border-accent bg-white px-3 py-1.5 text-xs font-medium text-accent transition-all duration-300 hover:bg-accent hover:text-white">
               View sample code
             </button>
           </div>

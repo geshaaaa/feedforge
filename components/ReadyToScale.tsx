@@ -34,10 +34,10 @@ export default function ReadyToScale() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-4 sm:flex-row">
-            <button className="border border-gray-900 bg-white px-8 py-3 text-sm font-semibold uppercase tracking-wider text-gray-900 transition-all duration-300 hover:bg-gray-50">
+            <button className="border border-accent bg-white px-8 py-3 text-sm font-semibold uppercase tracking-wider text-accent transition-all duration-300 hover:bg-accent hover:text-white">
               START FREE 14-DAY TRIAL
             </button>
-            <button className="border border-gray-900 bg-gray-900 px-8 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-gray-800">
+            <button className="border border-accent bg-accent px-8 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#000fd9]">
               TALK TO SALES
             </button>
           </div>
