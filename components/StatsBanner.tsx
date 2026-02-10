@@ -85,8 +85,8 @@ export default function StatsBanner() {
       </div>
 
       {/* Main Content Section */}
-      <div className="mx-auto max-w-7xl border-b border-gray-200 px-6 py-12 lg:py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div className="mx-auto flex max-w-5xl border-b border-gray-200 px-6 py-12 lg:py-16 justify-center">
+        <div className="grid w-full grid-cols-1 gap-8 text-center md:grid-cols-3">
           {stats.map((stat, index) => (
             <div
               key={index}
