@@ -65,10 +65,25 @@ export default function SimpleProcess() {
           </p>
         </div>
 
-        {/* Timeline Process Steps */}
-        <div className="relative py-20">
+        {/* Mobile: vertical list of steps */}
+        <div className="space-y-8 md:hidden">
+          {steps.map((step, index) => (
+            <div key={index} className="flex items-start gap-4">
+              <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-white">
+                <div className="text-gray-900">{step.icon}</div>
+              </div>
+              <div>
+                <h3 className="mb-1 text-sm font-bold text-accent">{step.title}</h3>
+                <p className="text-xs text-gray-500">{step.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: timeline process steps */}
+        <div className="relative hidden py-20 md:block">
           {/* Horizontal Line */}
-          <div className="absolute left-0 right-0 top-1/2 h-px -translate-y-1/2 bg-gray-300"></div>
+          <div className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-gray-300"></div>
           
           <div className="relative grid grid-cols-4 gap-4">
             {steps.map((step, index) => (
