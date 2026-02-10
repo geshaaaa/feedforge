@@ -33,7 +33,7 @@ export default function Hero() {
               <span className="absolute -right-1 -top-1 h-2 w-2 border-r-2 border-t-2 border-gray-900"></span>
               <span className="absolute -left-1 -bottom-1 h-2 w-2 border-l-2 border-b-2 border-gray-900"></span>
               <span className="absolute -right-1 -bottom-1 h-2 w-2 border-r-2 border-b-2 border-gray-900"></span>
-              <span className="relative">Start Building</span>
+              <span className="relative">Request a Demo</span>
             </button>
             <button className="relative border border-gray-300 bg-white px-5 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50">
               {/* Corner markers */}
@@ -41,7 +41,7 @@ export default function Hero() {
               <span className="absolute -right-1 -top-1 h-2 w-2 border-r-2 border-t-2 border-gray-900"></span>
               <span className="absolute -left-1 -bottom-1 h-2 w-2 border-l-2 border-b-2 border-gray-900"></span>
               <span className="absolute -right-1 -bottom-1 h-2 w-2 border-r-2 border-b-2 border-gray-900"></span>
-              <span className="relative">Get a Demo</span>
+              <span className="relative">Get Started</span>
             </button>
           </div>
         </div>
