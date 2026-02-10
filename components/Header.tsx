@@ -15,7 +15,7 @@ export default function Header() {
         </div>
 
         {/* Navigation */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 md:flex nav-family">
           <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
             Product
           </a>
