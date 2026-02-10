@@ -4,25 +4,25 @@ import { useEffect, useState } from 'react'
 
 const stats = [
   {
-    label: 'ROI INCREASE',
-    value: 240,
+    //label: 'ROI INCREASE',
+    value: 60,
     suffix: '%',
     prefix: '+',
-    description: 'Average return on ad spend for clients',
+    description: 'Faster feed issue remediation',
   },
   {
-    label: 'TIME SAVED',
+    //label: 'TIME SAVED',
+    value: 25,
+    suffix: ' pts',
+    prefix: '+',
+    description: 'Avg. AI Search Readiness lift',
+  },
+  {
+    //label: 'GLOBAL REACH',
     value: 30,
-    suffix: 'hrs',
-    prefix: '',
-    description: 'Per week on manual feed adjustments',
-  },
-  {
-    label: 'GLOBAL REACH',
-    value: 100,
     suffix: '+',
     prefix: '',
-    description: 'Countries supported with auto-currency',
+    description: 'Channels & AI endpoints',
   },
 ]
 
