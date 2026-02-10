@@ -4,21 +4,21 @@ import { useEffect, useState } from 'react'
 
 const stats = [
   {
-    //label: 'ROI INCREASE',
+    label: 'ROI INCREASE',
     value: 60,
     suffix: '%',
     prefix: '+',
     description: 'Faster feed issue remediation',
   },
   {
-    //label: 'TIME SAVED',
+    label: 'TIME SAVED',
     value: 25,
     suffix: ' pts',
     prefix: '+',
     description: 'Avg. AI Search Readiness lift',
   },
   {
-    //label: 'GLOBAL REACH',
+    label: 'GLOBAL REACH',
     value: 30,
     suffix: '+',
     prefix: '',
