@@ -1,170 +1,234 @@
 'use client'
 
+import { useState, useEffect } from 'react'
+
+interface DataPoint {
+  name: string
+  value: number
+  timestamp: number
+}
+
 export default function DashboardCards() {
+  const [data, setData] = useState<DataPoint[]>([])
+  const [isAnimating, setIsAnimating] = useState(true)
+
+  // Generate initial data
+  useEffect(() => {
+    const initialData: DataPoint[] = []
+    const now = Date.now()
+    for (let i = 11; i >= 0; i--) {
+      initialData.push({
+        name: new Date(now - i * 60000).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }),
+        value: Math.floor(Math.random() * 80) + 20,
+        timestamp: now - i * 60000,
+      })
+    }
+    setData(initialData)
+  }, [])
+
+  // Live data updates every 2 seconds
+  useEffect(() => {
+    if (!isAnimating) return
+
+    const interval = setInterval(() => {
+      setData((prevData) => {
+        const newData = [...prevData]
+        // Remove oldest point
+        newData.shift()
+        // Add new point with slight variation
+        const lastValue = prevData[prevData.length - 1]?.value || 50
+        const newValue = Math.max(20, Math.min(100, lastValue + (Math.random() - 0.5) * 10))
+        newData.push({
+          name: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }),
+          value: Math.floor(newValue),
+          timestamp: Date.now(),
+        })
+        return newData
+      })
+    }, 2000)
+
+    return () => clearInterval(interval)
+  }, [isAnimating])
+
+  // Calculate stats
+  const currentValue = data[data.length - 1]?.value || 0
+  const previousValue = data[data.length - 2]?.value || 0
+  const change = currentValue - previousValue
+  const changePercent = previousValue > 0 ? ((change / previousValue) * 100).toFixed(1) : '0.0'
+
+  // Find max value for scaling
+  const maxValue = Math.max(...data.map((d) => d.value), 100)
+
   return (
-    <div className="w-full max-w-sm grid grid-cols-2 gap-2">
-      {/* Card 1: Search Visibility */}
-      <div className="aspect-square border border-gray-200 bg-white p-2 shadow-sm overflow-hidden transition-all duration-300 hover:border-accent hover:shadow-md hover:-translate-y-1">
-        <div className="mb-1 flex items-center justify-between">
-          <h3 className="text-xs font-semibold text-gray-900">Search Visibility</h3>
-          <div className="flex items-center gap-1">
-            <a href="#" className="text-[10px] text-gray-500 hover:text-accent">
-              Analysis &gt;
-            </a>
-            <button className="text-gray-900 hover:text-gray-600">
-              <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" fill="currentColor" />
-                <text x="12" y="16" textAnchor="middle" fontSize="10" fill="white">i</text>
-              </svg>
-            </button>
-          </div>
+    <div className="w-full max-w-2xl border border-gray-200 bg-white p-6 shadow-lg">
+      {/* Header */}
+      <div className="mb-4 flex items-center justify-between">
+        <div>
+          <h3 className="text-sm font-semibold text-gray-900">Live Performance Metrics</h3>
+          <p className="mt-0.5 text-xs text-gray-500">Real-time data updates</p>
         </div>
-        <div className="relative mb-1 flex items-center justify-center">
-          <svg className="h-20 w-20" viewBox="0 0 100 100">
-            {/* Background arc */}
-            <circle
-              cx="50"
-              cy="50"
-              r="40"
-              fill="none"
-              stroke="#e5e7eb"
-              strokeWidth="8"
-              strokeDasharray="251.2"
-              strokeDashoffset="0"
-              transform="rotate(-90 50 50)"
-            />
-            {/* Progress arc - 85% filled */}
-            <circle
-              cx="50"
-              cy="50"
-              r="40"
-              fill="none"
-              stroke="#090088"
-              strokeWidth="8"
-              strokeDasharray="251.2"
-              strokeDashoffset="37.68"
-              transform="rotate(-90 50 50)"
-              className="transition-all duration-500"
-            />
-          </svg>
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <div className="text-xs font-bold text-accent">+27%</div>
-            <div className="mt-0.5 text-[8px] font-medium text-gray-900">Optimization Lift</div>
-          </div>
-        </div>
-        <div className="flex items-center justify-between text-[10px] text-gray-600 mb-1">
-          <span>Low</span>
-          <span>High</span>
-        </div>
-        <div className="flex items-center justify-between border-t border-gray-100 pt-1 text-[10px] text-gray-600">
-          <span>32 Channels</span>
-          <span className="text-gray-900">Active</span>
-        </div>
-      </div>
-
-      {/* Card 2: Active Channels */}
-      <div className="aspect-square border border-gray-200 bg-white p-2 shadow-sm overflow-hidden transition-all duration-300 hover:border-accent hover:shadow-md hover:-translate-y-1">
-        <div className="mb-1 flex items-start justify-between">
-          <div>
-            <div className="mb-1 flex h-6 w-6 items-center justify-center bg-accent/10">
-              <svg className="h-3 w-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-              </svg>
+        <div className="flex items-center gap-2">
+          {/* Live indicator */}
+          <div className="flex items-center gap-1.5">
+            <div className="relative">
+              <div className="h-2 w-2 rounded-full bg-green-500"></div>
+              <div className="absolute inset-0 h-2 w-2 animate-ping rounded-full bg-green-500 opacity-75"></div>
             </div>
-            <h3 className="text-xs font-semibold text-gray-900">Active Channels</h3>
+            <span className="text-xs font-medium text-gray-600">Live</span>
           </div>
-          <button className="text-gray-900 hover:text-gray-600">
-            <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10" fill="currentColor" />
-              <text x="12" y="16" textAnchor="middle" fontSize="10" fill="white">i</text>
-            </svg>
+          <button
+            onClick={() => setIsAnimating(!isAnimating)}
+            className="rounded border border-gray-300 bg-white px-2 py-1 text-xs font-medium text-gray-700 transition-colors hover:bg-gray-50"
+          >
+            {isAnimating ? 'Pause' : 'Resume'}
           </button>
         </div>
-        <div className="mb-1 text-2xl font-bold text-accent">32</div>
-        <div className="flex items-center gap-1">
-          <span className="bg-accent/10 px-1.5 py-0.5 text-[10px] font-medium text-accent">
-            +12%
-          </span>
-          <span className="text-[10px] text-gray-500">new this month</span>
-        </div>
       </div>
 
-      {/* Card 3: Processed SKUs */}
-      <div className="aspect-square border border-gray-200 bg-white p-2 shadow-sm overflow-hidden transition-all duration-300 hover:border-accent hover:shadow-md hover:-translate-y-1">
-        <div className="mb-1 flex items-start justify-between">
-          <div>
-            <div className="mb-1 flex h-6 w-6 items-center justify-center bg-accent/10">
-              <svg className="h-3 w-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-              </svg>
-            </div>
-            <h3 className="text-xs font-semibold text-gray-900">Processed SKUs</h3>
+      {/* Current Stats */}
+      <div className="mb-6 grid grid-cols-3 gap-4 border-b border-gray-100 pb-4">
+        <div>
+          <div className="text-xs text-gray-500">Current Value</div>
+          <div className="mt-1 text-2xl font-bold text-accent">{currentValue}</div>
+        </div>
+        <div>
+          <div className="text-xs text-gray-500">Change</div>
+          <div className={`mt-1 text-xl font-bold ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+            {change >= 0 ? '+' : ''}
+            {change.toFixed(1)}
           </div>
-          <button className="text-gray-900 hover:text-gray-600">
-            <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10" fill="currentColor" />
-              <text x="12" y="16" textAnchor="middle" fontSize="10" fill="white">i</text>
-            </svg>
-          </button>
         </div>
-        <div className="mb-1 text-2xl font-bold text-accent">1.2M</div>
-        <div className="flex items-center gap-1">
-          <span className="bg-accent/10 px-1.5 py-0.5 text-[10px] font-medium text-accent">
-            +8%
-          </span>
-          <span className="text-[10px] text-gray-500">vs last week</span>
+        <div>
+          <div className="text-xs text-gray-500">Change %</div>
+          <div className={`mt-1 text-xl font-bold ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+            {change >= 0 ? '+' : ''}
+            {changePercent}%
+          </div>
         </div>
       </div>
 
-      {/* Card 4: AI Readiness */}
-      <div className="aspect-square border border-gray-200 bg-white p-2 shadow-sm overflow-hidden transition-all duration-300 hover:border-accent hover:shadow-md hover:-translate-y-1">
-        <div className="mb-1 flex items-center justify-between">
-          <h3 className="text-xs font-semibold text-gray-900">AI Readiness</h3>
-          <a href="#" className="text-[10px] text-gray-500 hover:text-accent">
-            Details &gt;
-          </a>
-        </div>
-        <div className="relative mb-1 flex items-center justify-center">
-          <svg className="h-20 w-20" viewBox="0 0 100 100">
-            {/* Background circle */}
-            <circle
-              cx="50"
-              cy="50"
-              r="40"
-              fill="none"
+      {/* Graph */}
+      <div className="relative h-64 w-full">
+        <svg className="h-full w-full" viewBox="0 0 800 200" preserveAspectRatio="none">
+          {/* Grid lines */}
+          {[0, 25, 50, 75, 100].map((y) => (
+            <line
+              key={y}
+              x1="0"
+              y1={200 - (y / 100) * 200}
+              x2="800"
+              y2={200 - (y / 100) * 200}
               stroke="#e5e7eb"
-              strokeWidth="6"
-              strokeDasharray="12 6"
+              strokeWidth="1"
+              strokeDasharray="4 4"
             />
-            {/* Progress arc - 82% filled */}
-            <circle
-              cx="50"
-              cy="50"
-              r="40"
+          ))}
+
+          {/* Area fill with gradient */}
+          <defs>
+            <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#090088" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#090088" stopOpacity="0.05" />
+            </linearGradient>
+          </defs>
+
+          {/* Area path */}
+          {data.length > 0 && (
+            <path
+              d={`M 0,200 ${data
+                .map(
+                  (point, index) =>
+                    `L ${(index / (data.length - 1)) * 800},${200 - (point.value / maxValue) * 200}`
+                )
+                .join(' ')} L 800,200 Z`}
+              fill="url(#areaGradient)"
+              className="transition-all duration-1000 ease-out"
+            />
+          )}
+
+          {/* Line path */}
+          {data.length > 0 && (
+            <path
+              d={`M ${data
+                .map(
+                  (point, index) =>
+                    `${(index / (data.length - 1)) * 800},${200 - (point.value / maxValue) * 200}`
+                )
+                .join(' L ')}`}
               fill="none"
               stroke="#090088"
-              strokeWidth="6"
-              strokeDasharray="251.2"
-              strokeDashoffset="45.216"
-              transform="rotate(-90 50 50)"
-              className="transition-all duration-500"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="transition-all duration-1000 ease-out"
             />
-          </svg>
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <div className="mb-0.5 flex h-4 w-4 items-center justify-center">
-              <svg className="h-3 w-3 text-gray-900" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
-              </svg>
-            </div>
-            <div className="flex items-baseline gap-0.5">
-              <span className="text-xs font-bold text-accent">82</span>
-              <span className="text-[9px] text-gray-500">/100</span>
-            </div>
-            <div className="mt-0.5 text-[8px] text-gray-500">Live Beta Score</div>
-          </div>
+          )}
+
+          {/* Data points */}
+          {data.map((point, index) => {
+            const x = (index / (data.length - 1)) * 800
+            const y = 200 - (point.value / maxValue) * 200
+            return (
+              <g key={index}>
+                {/* Glow effect */}
+                <circle
+                  cx={x}
+                  cy={y}
+                  r="6"
+                  fill="#090088"
+                  opacity="0.3"
+                  className="animate-pulse"
+                />
+                {/* Main point */}
+                <circle
+                  cx={x}
+                  cy={y}
+                  r="4"
+                  fill="#090088"
+                  className="transition-all duration-1000 ease-out"
+                />
+                {/* Value label on hover */}
+                <text
+                  x={x}
+                  y={y - 15}
+                  textAnchor="middle"
+                  className="text-xs font-semibold fill-gray-700 opacity-0 hover:opacity-100 transition-opacity"
+                >
+                  {point.value}
+                </text>
+              </g>
+            )
+          })}
+        </svg>
+
+        {/* Y-axis labels */}
+        <div className="absolute left-0 top-0 flex h-full flex-col justify-between py-2 text-xs text-gray-500">
+          <span>{maxValue}</span>
+          <span>{Math.floor(maxValue * 0.75)}</span>
+          <span>{Math.floor(maxValue * 0.5)}</span>
+          <span>{Math.floor(maxValue * 0.25)}</span>
+          <span>0</span>
+        </div>
+
+        {/* X-axis labels */}
+        <div className="absolute bottom-0 left-0 flex w-full justify-between px-2 text-xs text-gray-500">
+          {data.filter((_, i) => i % 3 === 0 || i === data.length - 1).map((point, index) => (
+            <span key={index}>{point.name}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* Legend */}
+      <div className="mt-4 flex items-center justify-center gap-4 text-xs text-gray-600">
+        <div className="flex items-center gap-1.5">
+          <div className="h-3 w-3 rounded-full bg-accent"></div>
+          <span>Performance Score</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <div className="h-3 w-3 rounded-full bg-accent/30"></div>
+          <span>Trend Area</span>
         </div>
       </div>
     </div>
   )
 }
-
