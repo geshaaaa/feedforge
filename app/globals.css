@@ -2,17 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Apply Space Grotesk (sans-serif) to all headings */
+/* Apply Segoe UI font everywhere */
+*,
+*::before,
+*::after {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+/* Ensure all headings use bold weight */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-vector), sans-serif !important;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
   font-weight: 700;
 }
 
+/* Body and all text elements */
+body,
+p,
+span,
+div,
+a,
+button,
+input,
+textarea,
+select,
+label,
+li,
+td,
+th {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+}
+
 .nav-family {
-  font-family: var(--font-vector), sans-serif;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
 }

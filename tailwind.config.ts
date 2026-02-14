@@ -15,7 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         serif: ['var(--font-playfair)', 'serif'],
-        vector: ['var(--font-vector)', 'sans-serif'],
+        vector: ['Segoe UI', '-apple-system', 'BlinkMacSystemFont', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif'],
       },
       keyframes: {
         scroll: {
