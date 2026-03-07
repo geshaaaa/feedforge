@@ -20,10 +20,10 @@ export default function StartBuilding() {
           {/* Left Column */}
           <div>
             <h2 className="mb-1 text-lg font-bold leading-tight text-gray-900 lg:text-xl">
-              Start building knowledgeable AI today
+              See your AI Readiness Score Free
             </h2>
             <p className="text-xs text-gray-600">
-              Create your first index for free, then pay as you go when you're ready to scale.
+              Start optimizing your product feed today. Create your first index for free, then pay as you go when you're ready to scale.
             </p>
           </div>
 

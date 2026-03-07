@@ -2,19 +2,19 @@
 
 const stats = [
   {
-    value: '243%',
-    category: 'PERPLEXITY GROWTH',
-    details: '3.8M to 1.3B visits in 2024',
+    value: '800M',
+    category: 'CHATGPT WEEKLY USERS',
+    details: 'Doubled from 400M in Feb 2025',
     icon: (
       <svg className="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
       </svg>
     ),
   },
   {
-    value: '60%',
-    category: 'ZERO-CLICK SEARCHES',
-    details: 'Answers without visiting sites',
+    value: '83%',
+    category: 'SHOPPERS ABANDON SITES',
+    details: 'with insufficient product information',
     icon: (
       <svg className="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -22,12 +22,12 @@ const stats = [
     ),
   },
   {
-    value: '800M',
-    category: 'CHATGPT WEEKLY USERS',
-    details: 'Doubled from 400M in Feb 2025',
+    value: '92%',
+    category: 'TOP-PERFORMING ECOMMERCE',
+    details: 'USE AI for dynamic, personalized product feeds',
     icon: (
       <svg className="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
       </svg>
     ),
   },
@@ -42,15 +42,15 @@ export default function SearchChanging() {
           <div>
             <div className="mb-4 flex items-center justify-center lg:justify-start">
               <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-900">
-                • MARKET SHIFT DETECTED
+                • Market Shift in Progress
               </span>
             </div>
             <h2 className="mb-4 text-3xl font-bold leading-tight text-gray-900 lg:text-4xl xl:text-5xl">
-              Search is Changing.{' '}
-              <span className="text-accent">Irreversibly Fast.</span>
+              Why Your Feed Quality{' '}
+              <span className="text-accent">Matters</span>
             </h2>
             <p className="text-sm leading-relaxed text-gray-700">
-              Customer behavior is outpacing your marketing stack. AI-powered discovery is fundamentally reshaping how the world finds your products.
+              Your product feed touches every channel — Google Shopping, Meta ads, Amazon, and now AI assistants. Bad data means missed sales everywhere.
             </p>
           </div>
 
@@ -86,7 +86,6 @@ export default function SearchChanging() {
             {/* Legacy Keyword Strategy Container */}
             <div className="flex h-full flex-col border border-gray-200 bg-white p-6 shadow-sm">
               <div className="mb-4">
-                <div className="mb-2 text-xs text-accent">SIMULATION MODE</div>
                 <div className="flex items-center gap-3">
                   <span className="bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
                     THE CHALLENGE
@@ -100,7 +99,7 @@ export default function SearchChanging() {
                   Your Strategy Is Losing Revenue Every Day.
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Old feed tools optimize for keywords, not conversations. When customers ask AI assistants natural questions, your products get left behind.
+                  Legacy feed tools are rule-based, manual, and brittle. FeedForge uses AI to manage complexity automatically; no more constant maintenance.
                 </p>
               </div>
 
@@ -151,7 +150,6 @@ export default function SearchChanging() {
             {/* AI-Native Optimization Container */}
             <div className="flex h-full flex-col border border-gray-200 bg-white p-6 shadow-sm">
               <div className="mb-4">
-                <div className="mb-2 text-xs text-accent">SIMULATION MODE</div>
                 <div className="flex items-center gap-3">
                   <span className="bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
                     THE SOLUTION

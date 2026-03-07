@@ -31,7 +31,7 @@ export default function CatalogPerfection() {
             </h2>
             
             <p className="mb-6 text-sm leading-relaxed text-gray-700">
-              Don't let poor data kill your ads. Our built-in AI (powered by Google Gemini) automatically rewrites titles, fixes descriptions, and tags products for maximum visibility.
+              Don't let poor data kill your ads. Our built-in AI automatically rewrites titles, fixes descriptions, and tags products for maximum visibility.
             </p>
 
             {/* Why it matters card */}

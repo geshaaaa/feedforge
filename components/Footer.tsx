@@ -2,13 +2,10 @@
 
 const footerLinks = {
   product: [
-    'Vector Database',
-    'Dedicated Read Nodes',
-    'Assistant',
-    'Documentation',
+    'Feed Optimization',
+    'AI Readiness Score',
+    'Channels',
     'Pricing',
-    'Security',
-    'Integrations',
   ],
   resources: [
     'Community Forum',

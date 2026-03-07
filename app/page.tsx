@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import LogoCarousel from '@/components/LogoCarousel'
 import StatsBanner from '@/components/StatsBanner'
 import SearchChanging from '@/components/SearchChanging'
+import AISolution from '@/components/AISolution'
 import SimpleProcess from '@/components/SimpleProcess'
 import BuiltForTeams from '@/components/BuiltForTeams'
 import ComplexTechnology from '@/components/ComplexTechnology'
@@ -20,6 +21,7 @@ export default function Home() {
       <LogoCarousel />
       <StatsBanner />
       <SearchChanging />
+      <AISolution />
       <SimpleProcess />
       <BuiltForTeams />
       <ComplexTechnology />

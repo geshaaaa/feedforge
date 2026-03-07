@@ -11,19 +11,16 @@ export default function Hero() {
           <div className="mb-4">
             <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-100 px-3 py-1 text-xs font-medium text-gray-900">
               <span className="h-1.5 w-1.5 rounded-full bg-gray-900"></span>
-              AI-native feeds for search, ads & agents
+              AI-powered product feeds for every channel
             </span>
           </div>
           
           <h1 className="mb-4 text-2xl font-bold leading-tight text-gray-900 lg:text-3xl xl:text-4xl">
-            Revenue, <span className="text-accent">Automated</span>
+            Your product feed, <span className="text-accent">AI optimized</span>
           </h1>
 
           <p className="mb-8 text-sm text-gray-600">
-            Transform your product catalog into AI-ready listings that perform
-            across traditional channels (Google, Meta, marketplaces) and next-
-            generation search (ChatGPT, Perplexity, AI Overviews), with measurable
-            results.
+            Transform your product catalog into high-performing listings across Google, Meta, and every marketplace — including the AI-powered channels reshaping how customers discover products.
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">
