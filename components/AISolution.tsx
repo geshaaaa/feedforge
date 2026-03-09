@@ -67,77 +67,80 @@ export default function AISolution() {
           </p>
         </div>
 
-        {/* Side by Side Layout */}
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-          {/* Left Column - Problems Section */}
-          <div className="flex flex-col">
-            <h3 className="mb-6 text-center text-xl font-bold text-gray-900 lg:text-left">The Operational Reality</h3>
-            <div className="flex flex-col gap-4">
-              {problems.map((problem, index) => (
-                <div
-                  key={index}
-                  className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-6 shadow-sm transition-all duration-500 hover:border-accent hover:shadow-lg hover:-translate-y-1"
-                >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-600 transition-all duration-500 group-hover:border-accent group-hover:bg-accent/10 group-hover:text-accent">
-                    <div className="h-6 w-6">{problem.icon}</div>
+        {/* Column headings */}
+        <div className="grid grid-cols-1 gap-6 border-b border-gray-200 pb-6 lg:grid-cols-2 lg:gap-10">
+          <h3 className="text-xl font-bold text-gray-900">Operational Challenges</h3>
+          <h3 className="text-xl font-bold text-gray-900">
+            <span className="text-accent">FeedForge Solution</span>
+          </h3>
+        </div>
+
+        {/* Modern comparison rows: Problem → Solution per row */}
+        <div className="space-y-0">
+          {problems.map((problem, index) => {
+            const solution = solutions[index]
+            const SolutionIcon = index === 2 ? (
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            ) : (
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            )
+            return (
+              <div
+                key={index}
+                className="group grid grid-cols-1 items-start gap-6 border-b border-gray-100 py-8 transition-colors last:border-b-0 lg:grid-cols-2 lg:gap-10 lg:py-10 lg:even:bg-gray-50/50"
+              >
+                {/* Problem */}
+                <div className="flex gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500">
+                    <div className="h-5 w-5">{problem.icon}</div>
                   </div>
-                  <h4 className="mb-2 text-base font-bold text-gray-900">{problem.title}</h4>
-                  <p className="text-sm leading-relaxed text-gray-600">{problem.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Column - Solution Section */}
-          <div className="flex flex-col">
-            <div className="mb-6 text-center lg:text-left">
-              <h3 className="mb-3 text-xl font-bold text-gray-900 lg:text-2xl">
-                The <span className="text-accent">AI Solution</span>
-              </h3>
-              <p className="text-sm leading-relaxed text-gray-700">
-                FeedForge differentiates on intelligence vs. legacy rule-based systems. Our AI doesn't just automate—it optimizes for every channel, including the AI search platforms reshaping how customers discover products.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-4">
-              {solutions.map((solution, index) => (
-                <div
-                  key={index}
-                  className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all duration-500 hover:border-accent hover:shadow-lg hover:-translate-y-1"
-                >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center text-accent">
-                    {index === 2 ? (
-                      <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    ) : (
-                      <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    )}
+                  <div>
+                    {/* <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">Reality</p> */}
+                    <h4 className="mb-1.5 text-lg font-bold text-gray-900">{problem.title}</h4>
+                    <p className="text-sm leading-relaxed text-gray-600">{problem.description}</p>
                   </div>
-                  <h4 className="mb-2 text-base font-bold text-gray-900">{solution.title}</h4>
-                  <p className="text-sm leading-relaxed text-gray-600">
-                    {solution.description.split(solution.highlight).map((part, i, arr) => (
-                      <span key={i}>
-                        {part}
-                        {i < arr.length - 1 && (
-                          <span className="font-semibold text-accent">{solution.highlight}</span>
-                        )}
-                      </span>
-                    ))}
-                  </p>
                 </div>
-              ))}
-            </div>
 
-            {/* Key Differentiator */}
-            <div className="mt-6 rounded-lg border-2 border-accent bg-accent/5 p-4 text-center transition-all duration-500 hover:bg-accent/10">
-              <p className="text-xs font-semibold text-gray-900">
-                <span className="text-accent">AI Search Optimization</span> — A key proof point of why our AI is more sophisticated than competitors'
-              </p>
-            </div>
-          </div>
+                {/* Solution */}
+                <div className="flex gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
+                    {SolutionIcon}
+                  </div>
+                  <div>
+                    {/* <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">AI Solution</p> */}
+                    <h4 className="mb-1.5 text-lg font-bold text-gray-900">{solution.title}</h4>
+                    <p className="text-sm leading-relaxed text-gray-600">
+                      {solution.description.split(solution.highlight).map((part, i, arr) => (
+                        <span key={i}>
+                          {part}
+                          {i < arr.length - 1 && (
+                            <span className="font-semibold text-accent">{solution.highlight}</span>
+                          )}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* Key differentiator strip */}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3 rounded-2xl border border-accent/30 bg-gradient-to-r from-accent/5 to-accent/10 px-6 py-4">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/20">
+            <svg className="h-4 w-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </span>
+          <p className="text-sm font-semibold text-gray-900">
+            <span className="text-accent">AI Search Optimization</span>
+            <span className="text-gray-600"> — A key proof point of why our AI is more sophisticated than competitors.</span>
+          </p>
         </div>
       </div>
     </section>
