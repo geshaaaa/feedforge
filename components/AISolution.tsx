@@ -75,8 +75,8 @@ export default function AISolution() {
           </h3>
         </div>
 
-        {/* Modern comparison rows: Problem → Solution per row */}
-        <div className="space-y-0">
+        {/* Comparison cards: one container per challenge + one per solution */}
+        <div className="space-y-6 lg:space-y-8">
           {problems.map((problem, index) => {
             const solution = solutions[index]
             const SolutionIcon = index === 2 ? (
@@ -91,28 +91,30 @@ export default function AISolution() {
             return (
               <div
                 key={index}
-                className="group grid grid-cols-1 items-start gap-6 border-b border-gray-100 py-8 transition-colors last:border-b-0 lg:grid-cols-2 lg:gap-10 lg:py-10 lg:even:bg-gray-50/50"
+                className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2 lg:gap-8"
               >
-                {/* Problem */}
-                <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500">
-                    <div className="h-5 w-5">{problem.icon}</div>
+                {/* Challenge card */}
+                <div className="group flex gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gray-400 hover:shadow-md lg:p-6">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-gray-50 text-gray-600 transition-colors duration-300 group-hover:border-gray-300 group-hover:bg-white">
+                    <div className="h-5 w-5 [&>svg]:h-5 [&>svg]:w-5">{problem.icon}</div>
                   </div>
-                  <div>
-                    {/* <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">Reality</p> */}
-                    <h4 className="mb-1.5 text-lg font-bold text-gray-900">{problem.title}</h4>
+                  <div className="min-w-0">
+                    <h4 className="mb-1.5 text-lg font-bold text-gray-900 transition-colors group-hover:text-gray-950">
+                      {problem.title}
+                    </h4>
                     <p className="text-sm leading-relaxed text-gray-600">{problem.description}</p>
                   </div>
                 </div>
 
-                {/* Solution */}
-                <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
+                {/* Solution card */}
+                <div className="group flex gap-4 rounded-xl border border-accent/20 bg-gradient-to-br from-white to-accent/[0.06] p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/45 hover:shadow-lg hover:shadow-accent/10 lg:p-6">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent ring-1 ring-accent/20 transition-all duration-300 group-hover:bg-accent/20 group-hover:ring-accent/35">
                     {SolutionIcon}
                   </div>
-                  <div>
-                    {/* <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">AI Solution</p> */}
-                    <h4 className="mb-1.5 text-lg font-bold text-gray-900">{solution.title}</h4>
+                  <div className="min-w-0">
+                    <h4 className="mb-1.5 text-lg font-bold text-gray-900 transition-colors group-hover:text-accent">
+                      {solution.title}
+                    </h4>
                     <p className="text-sm leading-relaxed text-gray-600">
                       {solution.description.split(solution.highlight).map((part, i, arr) => (
                         <span key={i}>

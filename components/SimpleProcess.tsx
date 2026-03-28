@@ -82,9 +82,8 @@ export default function SimpleProcess() {
 
         {/* Desktop: timeline process steps */}
         <div className="relative hidden py-20 md:block">
-          {/* Horizontal Line */}
-          <div className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-gray-300"></div>
-          
+          <div className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-gray-300" />
+
           <div className="relative grid grid-cols-4 gap-4">
             {steps.map((step, index) => (
               <div key={index} className="relative flex flex-col items-center">

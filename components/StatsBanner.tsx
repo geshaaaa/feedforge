@@ -67,44 +67,45 @@ export default function StatsBanner() {
 
   return (
     <section className="border-t border-gray-200 bg-white">
-      {/* Top Bar */}
-      <div className="border-b border-gray-200 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 py-4">
-          <div className="grid grid-cols-1 gap-4 text-center md:grid-cols-3">
-            <div className="text-sm font-medium text-gray-600">
+      {/* Shared width + 3-column tracks so top and bottom dividers line up */}
+      <div className="mx-auto w-full max-w-none px-6 lg:px-10 xl:px-14">
+        {/* Top Bar */}
+        <div className="border-b border-gray-200 bg-gray-50 py-4 lg:py-5">
+          <div className="grid grid-cols-1 divide-y divide-gray-200 text-center md:grid-cols-3 md:divide-x md:divide-y-0">
+            <div className="px-3 py-3 text-sm font-medium text-gray-600 sm:px-4 md:py-2 md:px-5 lg:px-6">
               TRUSTED BY 500+ MERCHANTS
             </div>
-            <div className="border-t border-gray-200 pt-4 text-sm font-medium text-gray-600 md:border-t-0 md:border-l md:pt-0 md:pl-4">
+            <div className="px-3 py-3 text-sm font-medium text-gray-600 sm:px-4 md:py-2 md:px-5 lg:px-6">
               $4.2B PROCESSED ANNUALLY
             </div>
-            <div className="border-t border-gray-200 pt-4 text-sm font-medium text-gray-600 md:border-t-0 md:border-l md:pt-0 md:pl-4">
+            <div className="px-3 py-3 text-sm font-medium text-gray-600 sm:px-4 md:py-2 md:px-5 lg:px-6">
               150+ CHANNELS
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Main Content Section */}
-      <div className="mx-auto flex max-w-5xl border-b border-gray-200 px-6 py-12 lg:py-16 justify-center">
-        <div className="grid w-full grid-cols-1 gap-8 text-center md:grid-cols-3">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className={`border-r border-gray-200 pr-8 last:border-r-0 md:pr-8`}
-            >
-              <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
-                {stat.label}
+        {/* Main stats — same grid as top row */}
+        <div className="border-b border-gray-200 py-10 lg:py-16">
+          <div className="grid grid-cols-1 divide-y divide-gray-200 text-center md:grid-cols-3 md:divide-x md:divide-y-0">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="px-3 py-8 sm:px-4 md:px-5 md:py-6 lg:px-8 lg:py-8"
+              >
+                <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
+                  {stat.label}
+                </div>
+                <div className="mb-2 text-4xl font-bold text-gray-900 lg:text-5xl">
+                  {stat.prefix}
+                  {countedValues[index]}
+                  {stat.suffix}
+                </div>
+                <div className="text-sm text-gray-600">
+                  {stat.description}
+                </div>
               </div>
-              <div className="mb-2 text-4xl font-bold text-gray-900 lg:text-5xl">
-                {stat.prefix}
-                {countedValues[index]}
-                {stat.suffix}
-              </div>
-              <div className="text-sm text-gray-600">
-                {stat.description}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

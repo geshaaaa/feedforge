@@ -47,13 +47,13 @@ export default function WorksWhereYouDo() {
 
   return (
     <section className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:py-16">
-        <div className="relative grid gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto w-full max-w-none px-6 py-12 lg:px-10 lg:py-16 xl:px-14">
+        <div className="relative grid w-full grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start lg:gap-x-12 lg:gap-y-0 xl:gap-x-16">
           {/* Vertical Separator Line */}
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gray-200 lg:block"></div>
+          <div className="pointer-events-none absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gray-200 lg:block" aria-hidden />
           
           {/* Left Column - Works where you do */}
-          <div>
+          <div className="min-w-0">
             <h2 className="mb-3 text-2xl font-bold text-accent lg:text-3xl">
               Works where you do
             </h2>
@@ -67,14 +67,14 @@ export default function WorksWhereYouDo() {
             {/* Two Rows of Moving Logo Carousel */}
             <div className="space-y-2">
               {/* First Row - Moving Right */}
-              <div className="overflow-hidden">
-                <div className="flex animate-scroll whitespace-nowrap">
+              <div className="overflow-hidden rounded-sm">
+                <div className="flex w-max animate-scroll whitespace-nowrap">
                   {duplicatedLogos.map((logo, index) => (
                     <div
                       key={index}
-                      className="flex-shrink-0 px-4"
+                      className="shrink-0 px-2 sm:px-3"
                     >
-                      <div className="flex h-10 w-20 items-center justify-center border border-gray-200 bg-gray-50 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent">
+                      <div className="flex h-10 items-center justify-center whitespace-nowrap border border-gray-200 bg-gray-50 px-3 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent sm:px-4">
                         {logo}
                       </div>
                     </div>
@@ -82,14 +82,14 @@ export default function WorksWhereYouDo() {
                 </div>
               </div>
               {/* Second Row - Moving Left */}
-              <div className="overflow-hidden">
-                <div className="flex animate-scroll-reverse whitespace-nowrap">
+              <div className="overflow-hidden rounded-sm">
+                <div className="flex w-max animate-scroll-reverse whitespace-nowrap">
                   {duplicatedLogos.map((logo, index) => (
                     <div
                       key={index}
-                      className="flex-shrink-0 px-4"
+                      className="shrink-0 px-2 sm:px-3"
                     >
-                      <div className="flex h-10 w-20 items-center justify-center border border-gray-200 bg-gray-50 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent">
+                      <div className="flex h-10 items-center justify-center whitespace-nowrap border border-gray-200 bg-gray-50 px-3 text-xs font-medium text-gray-600 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent sm:px-4">
                         {logo}
                       </div>
                     </div>
@@ -100,7 +100,7 @@ export default function WorksWhereYouDo() {
           </div>
 
           {/* Right Column - Enterprise-ready AI */}
-          <div>
+          <div className="min-w-0">
             <h2 className="mb-3 text-2xl font-bold text-accent lg:text-3xl">
               Enterprise-ready AI
             </h2>
@@ -111,12 +111,12 @@ export default function WorksWhereYouDo() {
               View Security
             </button>
 
-            {/* Features in Horizontal Small Containers */}
-            <div className="flex flex-wrap gap-3">
+            {/* Features — fill column width on large screens */}
+            <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-3 lg:min-h-[7rem]">
               {enterpriseFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="group flex h-28 w-36 flex-col items-center justify-center border border-gray-200 bg-white p-3 text-center transition-all duration-300 hover:border-accent hover:shadow-md"
+                  className="group flex min-h-[7rem] w-full flex-col items-center justify-center border border-gray-200 bg-white p-3 text-center transition-all duration-300 hover:border-accent hover:shadow-md sm:min-h-[7.5rem]"
                 >
                   <div className="mb-2 flex h-5 w-5 items-center justify-center text-accent transition-colors group-hover:text-accent">
                     {feature.icon}

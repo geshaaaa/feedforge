@@ -36,7 +36,7 @@ const stats = [
 export default function SearchChanging() {
   return (
     <section className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+      <div className="mx-auto w-full max-w-none px-6 py-16 lg:px-10 lg:py-20 xl:px-14">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
           {/* Left Column - Heading and Description */}
           <div>
@@ -59,13 +59,13 @@ export default function SearchChanging() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="relative flex aspect-square w-48 items-center justify-center rounded-full border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-gray-900 hover:shadow-md hover:-translate-y-1"
+                className="relative flex aspect-square w-48 items-center justify-center rounded-full border border-gray-200 bg-white px-5 py-6 shadow-sm transition-all duration-300 hover:border-gray-900 hover:shadow-md hover:-translate-y-1"
               >
-                <div className="absolute right-4 top-4 z-10">
-                  <div className="text-gray-900">{stat.icon}</div>
-                </div>
-                <div className="flex max-w-[92%] flex-col items-center text-center">
-                  <div className="mb-1.5 text-lg font-bold leading-tight text-gray-900 lg:text-xl">
+                <div className="flex max-w-[90%] flex-col items-center justify-center text-center">
+                  <div className="mb-1.5 shrink-0 text-gray-900" aria-hidden>
+                    {stat.icon}
+                  </div>
+                  <div className="mb-1 text-lg font-bold leading-tight text-gray-900 lg:text-xl">
                     {stat.value}
                   </div>
                   <div className="mb-1 text-[0.6875rem] font-semibold uppercase leading-snug tracking-wide text-gray-900">
@@ -80,11 +80,11 @@ export default function SearchChanging() {
           </div>
         </div>
 
-        {/* Simulation Mode Section */}
+        {/* Simulation Mode Section — full width; matched column heights */}
         <div className="mt-16">
-          <div className="grid gap-6 lg:grid-cols-2 lg:items-start mb-8">
+          <div className="mb-8 grid gap-6 lg:grid-cols-2 lg:items-stretch lg:gap-8">
             {/* Legacy Keyword Strategy Container */}
-            <div className="flex h-full flex-col border border-gray-200 bg-white p-6 shadow-sm">
+            <div className="flex h-full min-h-0 flex-col border border-gray-200 bg-white p-6 shadow-sm lg:p-7">
               <div className="mb-4">
                 <div className="flex items-center gap-3">
                   <span className="bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
@@ -94,7 +94,7 @@ export default function SearchChanging() {
                 </div>
               </div>
 
-              <div className="mb-4">
+              <div className="mb-4 min-h-[5.5rem] lg:min-h-[6rem]">
                 <h4 className="mb-2 text-lg font-bold text-gray-900">
                   Your Strategy Is Losing Revenue Every Day.
                 </h4>
@@ -104,8 +104,8 @@ export default function SearchChanging() {
               </div>
 
               {/* System Status */}
-              <div className="mb-4 flex items-center gap-2 transition-all duration-300 hover:opacity-80 cursor-pointer">
-                <svg className="h-5 w-5 text-gray-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mb-4 flex min-h-[3.25rem] items-center gap-2 transition-all duration-300 hover:opacity-80 cursor-pointer">
+                <svg className="h-5 w-5 shrink-0 text-gray-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
                 <div>
@@ -121,34 +121,42 @@ export default function SearchChanging() {
                 </div>
               </div>
 
-              {/* Legacy Cards */}
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-                <div className="flex flex-col items-center justify-between border border-accent bg-accent/5 p-3 text-center">
-                  <div className="mb-2 text-xl font-bold text-accent">46%</div>
-                  <div className="mb-2 text-xs text-gray-700">Revenue drop when AI search appears</div>
-                  <svg className="h-4 w-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                </div>
-                <div className="flex flex-col items-center justify-between border border-accent bg-accent/5 p-3 text-center">
-                  <div className="mb-2 text-xl font-bold text-accent">77%</div>
-                  <div className="mb-2 text-xs text-gray-700">Customers use AI for discovery</div>
-                  <svg className="h-4 w-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-                <div className="flex flex-col items-center justify-between border border-accent bg-accent/5 p-3 text-center">
-                  <div className="mb-2 text-xl font-bold text-accent">90M+</div>
-                  <div className="mb-2 text-xs text-gray-700">Will rely on AI search by 2027</div>
-                  <svg className="h-4 w-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
+              {/* Legacy sub-cards — equal height + hover */}
+              <div className="mt-auto flex min-h-0 flex-1 flex-col pt-2">
+                <div className="grid min-h-0 flex-1 grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-3">
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                    <div className="shrink-0 text-xl font-bold text-accent">46%</div>
+                    <p className="my-2 flex flex-1 items-center text-xs leading-snug text-gray-700">
+                      Revenue drop when AI search appears
+                    </p>
+                    <svg className="h-4 w-4 shrink-0 text-accent transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                  </div>
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                    <div className="shrink-0 text-xl font-bold text-accent">77%</div>
+                    <p className="my-2 flex flex-1 items-center text-xs leading-snug text-gray-700">
+                      Customers use AI for discovery
+                    </p>
+                    <svg className="h-4 w-4 shrink-0 text-accent transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </div>
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                    <div className="shrink-0 text-xl font-bold text-accent">90M+</div>
+                    <p className="my-2 flex flex-1 items-center text-xs leading-snug text-gray-700">
+                      Will rely on AI search by 2027
+                    </p>
+                    <svg className="h-4 w-4 shrink-0 text-accent transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* AI-Native Optimization Container */}
-            <div className="flex h-full flex-col border border-gray-200 bg-white p-6 shadow-sm">
+            <div className="flex h-full min-h-0 flex-col border border-gray-200 bg-white p-6 shadow-sm lg:p-7">
               <div className="mb-4">
                 <div className="flex items-center gap-3">
                   <span className="bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
@@ -158,7 +166,7 @@ export default function SearchChanging() {
                 </div>
               </div>
 
-              <div className="mb-4">
+              <div className="mb-4 min-h-[5.5rem] lg:min-h-[6rem]">
                 <h4 className="mb-2 text-lg font-bold text-gray-900">
                   Future-Proof Your Revenue Stream
                 </h4>
@@ -168,8 +176,8 @@ export default function SearchChanging() {
               </div>
 
               {/* System Status */}
-              <div className="mb-4 flex items-center gap-2 transition-all duration-300 hover:opacity-80 cursor-pointer">
-                <svg className="h-5 w-5 text-gray-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mb-4 flex min-h-[3.25rem] items-center gap-2 transition-all duration-300 hover:opacity-80 cursor-pointer">
+                <svg className="h-5 w-5 shrink-0 text-gray-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -184,28 +192,36 @@ export default function SearchChanging() {
                 </div>
               </div>
 
-              {/* AI-Native Cards */}
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-                <div className="flex flex-col items-center border border-accent bg-accent/5 p-3 text-center">
-                  <svg className="mb-2 h-5 w-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <div className="mb-1 text-sm font-semibold text-accent">AI-Native Platform</div>
-                  <div className="text-xs text-gray-600">Built for conversational search</div>
-                </div>
-                <div className="flex flex-col items-center border border-accent bg-accent/5 p-3 text-center">
-                  <svg className="mb-2 h-5 w-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <div className="mb-1 text-sm font-semibold text-accent">Omnichannel Performance</div>
-                  <div className="text-xs text-gray-600">Managed from one central dashboard</div>
-                </div>
-                <div className="flex flex-col items-center border border-accent bg-accent/5 p-3 text-center">
-                  <svg className="mb-2 h-5 w-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                  <div className="mb-1 text-sm font-semibold text-accent">Real-time Adaptation</div>
-                  <div className="text-xs text-gray-600">Automatically adjusts feed structure</div>
+              {/* Solution sub-cards — same structure/heights as challenge row */}
+              <div className="mt-auto flex min-h-0 flex-1 flex-col pt-2">
+                <div className="grid min-h-0 flex-1 grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-3">
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                    <svg className="mb-2 h-5 w-5 shrink-0 text-accent transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <div className="mb-2 shrink-0 text-sm font-semibold text-accent">AI-Native Platform</div>
+                    <p className="flex flex-1 items-center text-xs leading-snug text-gray-600">
+                      Built for conversational search
+                    </p>
+                  </div>
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                    <svg className="mb-2 h-5 w-5 shrink-0 text-accent transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <div className="mb-2 shrink-0 text-sm font-semibold text-accent">Omnichannel Performance</div>
+                    <p className="flex flex-1 items-center text-xs leading-snug text-gray-600">
+                      Managed from one central dashboard
+                    </p>
+                  </div>
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                    <svg className="mb-2 h-5 w-5 shrink-0 text-accent transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    <div className="mb-2 shrink-0 text-sm font-semibold text-accent">Real-time Adaptation</div>
+                    <p className="flex flex-1 items-center text-xs leading-snug text-gray-600">
+                      Automatically adjusts feed structure
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
