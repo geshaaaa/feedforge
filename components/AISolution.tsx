@@ -54,9 +54,10 @@ export default function AISolution() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
         {/* Header */}
         <div className="mb-12 text-center">
-          <div className="mb-4 flex items-center justify-center gap-2">
-            <div className="h-2 w-2 bg-gray-900"></div>
-            <span className="text-sm font-medium text-accent">The Feed Management Challenge</span>
+          <div className="mb-4 flex items-center justify-center">
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-900">
+              • The Feed Management Challenge
+            </span>
           </div>
           <h2 className="mb-4 text-3xl font-bold leading-tight text-gray-900 lg:text-4xl">
             Feed Management is{' '}

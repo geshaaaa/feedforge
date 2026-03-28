@@ -50,9 +50,10 @@ export default function BuiltForTeams() {
     <section className="border-t border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
         {/* Header */}
-        <div className="mb-4 flex items-center justify-center gap-2">
-          <div className="h-2 w-2 rounded-full bg-gray-900"></div>
-          <span className="text-sm font-medium text-gray-900">Designed for Teams</span>
+        <div className="mb-4 flex items-center justify-center">
+          <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-900">
+            • Designed for Teams
+          </span>
         </div>
         
         <h2 className="mb-4 mx-auto text-center text-3xl font-bold text-accent lg:text-4xl">
