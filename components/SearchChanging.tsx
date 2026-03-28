@@ -6,7 +6,7 @@ const stats = [
     category: 'CHATGPT WEEKLY USERS',
     details: 'Doubled from 400M in Feb 2025',
     icon: (
-      <svg className="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+      <svg className="h-5 w-5 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
       </svg>
     ),
@@ -16,7 +16,7 @@ const stats = [
     category: 'SHOPPERS ABANDON SITES',
     details: 'with insufficient product information',
     icon: (
-      <svg className="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+      <svg className="h-5 w-5 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
@@ -26,7 +26,7 @@ const stats = [
     category: 'TOP-PERFORMING ECOMMERCE',
     details: 'USE AI for dynamic, personalized product feeds',
     icon: (
-      <svg className="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+      <svg className="h-5 w-5 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
       </svg>
     ),
@@ -61,17 +61,17 @@ export default function SearchChanging() {
                 key={index}
                 className="relative flex aspect-square w-48 items-center justify-center rounded-full border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-gray-900 hover:shadow-md hover:-translate-y-1"
               >
-                <div className="absolute right-6 top-6 z-10">
-                  <div className="h-6 w-6 text-gray-900">{stat.icon}</div>
+                <div className="absolute right-4 top-4 z-10">
+                  <div className="text-gray-900">{stat.icon}</div>
                 </div>
-                <div className="flex flex-col items-center text-center">
-                  <div className="mb-2 text-xl font-bold text-gray-900 lg:text-2xl">
+                <div className="flex max-w-[92%] flex-col items-center text-center">
+                  <div className="mb-1.5 text-lg font-bold leading-tight text-gray-900 lg:text-xl">
                     {stat.value}
                   </div>
-                  <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-900">
+                  <div className="mb-1 text-[0.6875rem] font-semibold uppercase leading-snug tracking-wide text-gray-900">
                     {stat.category}
                   </div>
-                  <div className="text-xs leading-tight text-gray-600">
+                  <div className="text-[0.6875rem] leading-snug text-gray-600">
                     {stat.details}
                   </div>
                 </div>
