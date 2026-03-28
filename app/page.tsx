@@ -21,11 +21,11 @@ export default function Home() {
       <LogoCarousel />
       <StatsBanner />
       <SearchChanging />
+      <CatalogPerfection />
       <AISolution />
       <SimpleProcess />
       <BuiltForTeams />
       <ComplexTechnology />
-      <CatalogPerfection />
       <WorksWhereYouDo />
       <DemoRequest />
       <StartBuilding />

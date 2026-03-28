@@ -80,7 +80,7 @@ export default function SearchChanging() {
           </div>
         </div>
 
-        {/* Simulation Mode Section — full width; matched column heights */}
+        {/* Challenge vs solution — Legacy Keyword Strategy & AI-Native Optimization */}
         <div className="mt-16">
           <div className="mb-8 grid gap-6 lg:grid-cols-2 lg:items-stretch lg:gap-8">
             {/* Legacy Keyword Strategy Container */}
