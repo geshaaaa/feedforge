@@ -15,11 +15,11 @@ export default function StartBuilding() {
   return (
     <section className="border-t border-gray-200 bg-white">
       {/* Top Section - Hero-like */}
-      <div className="mx-auto max-w-7xl px-6 py-4 lg:py-6">
-        <div className="grid gap-3 lg:grid-cols-2 lg:items-center lg:gap-4">
+      <div className="mx-auto max-w-7xl min-w-0 px-4 py-4 sm:px-6 lg:py-6">
+        <div className="grid min-w-0 gap-3 lg:grid-cols-2 lg:items-center lg:gap-4">
           {/* Left Column */}
-          <div>
-            <h2 className="mb-1 text-lg font-bold leading-tight text-gray-900 lg:text-xl">
+          <div className="min-w-0">
+            <h2 className="mb-1 text-balance text-base font-bold leading-tight text-gray-900 sm:text-lg lg:text-xl">
               See your AI Readiness Score … Free
             </h2>
             <p className="text-xs text-gray-600">
@@ -41,12 +41,12 @@ export default function StartBuilding() {
 
       {/* Bottom Section - Subscription */}
       <div className="border-t border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 py-4">
-          <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <h3 className="text-sm font-semibold text-gray-900">
+        <div className="mx-auto max-w-7xl min-w-0 px-4 py-4 sm:px-6">
+          <div className="flex min-w-0 flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <h3 className="shrink-0 text-center text-sm font-semibold text-gray-900 sm:text-left">
               Subscribe to FeedForge
             </h3>
-            <form onSubmit={handleSubscribe} className="flex w-full max-w-md sm:w-auto">
+            <form onSubmit={handleSubscribe} className="flex min-w-0 w-full max-w-md sm:w-auto">
               <input
                 type="email"
                 value={email}

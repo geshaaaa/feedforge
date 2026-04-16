@@ -48,7 +48,7 @@ const teamTypes = [
 export default function BuiltForTeams() {
   return (
     <section className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl min-w-0 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
         {/* Header */}
         <div className="mb-4 flex items-center justify-center">
           <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-900">
@@ -56,7 +56,7 @@ export default function BuiltForTeams() {
           </span>
         </div>
         
-        <h2 className="mb-4 mx-auto text-center text-3xl font-bold text-accent lg:text-4xl">
+        <h2 className="mx-auto mb-4 text-balance text-center text-2xl font-bold text-accent sm:text-3xl lg:text-4xl">
           Built for teams who live in product data
         </h2>
         
@@ -65,8 +65,8 @@ export default function BuiltForTeams() {
         </p>
 
         {/* Large Container with Grid */}
-        <div className="rounded-lg border border-gray-200 bg-white p-8 shadow-sm">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6 md:p-8">
+          <div className="grid min-w-0 grid-cols-1 gap-8 md:grid-cols-3">
             {teamTypes.map((team, index) => (
               <div key={index} className="relative">
                 {/* Vertical line separator (not on last item) */}
@@ -74,7 +74,7 @@ export default function BuiltForTeams() {
                   <div className="absolute right-0 top-0 hidden h-full w-px bg-gray-200 md:block" />
                 )}
                 
-                <div className="pr-8 md:pr-8">
+                <div className="min-w-0 pr-0 md:pr-8">
                   {/* Icon */}
                   <div className="mb-4 flex justify-center">
                     {team.icon}

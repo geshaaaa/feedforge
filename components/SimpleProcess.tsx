@@ -50,7 +50,7 @@ const steps = [
 export default function SimpleProcess() {
   return (
     <section className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl min-w-0 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
         {/* Header */}
         <div className="mb-12 text-center">
           <div className="mb-4 flex items-center justify-center">
@@ -58,7 +58,7 @@ export default function SimpleProcess() {
               • Simple Process
             </span>
           </div>
-          <h2 className="mb-4 text-3xl font-bold text-gray-900 lg:text-4xl">
+          <h2 className="mb-4 text-balance text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">
             Powerful Results, <span className="text-accent">Simple Process</span>
           </h2>
           <p className="mx-auto max-w-2xl text-sm text-gray-600">
@@ -81,11 +81,13 @@ export default function SimpleProcess() {
           ))}
         </div>
 
-        {/* Desktop: timeline process steps */}
-        <div className="relative hidden py-20 md:block">
-          <div className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-gray-300" />
+        {/* Desktop: timeline process steps — horizontal scroll on md/lg so four columns do not crush */}
+        <div className="relative hidden md:block">
+          <div className="-mx-4 overflow-x-auto pb-2 sm:-mx-6 lg:mx-0 lg:overflow-visible lg:pb-0">
+            <div className="relative min-w-[52rem] px-4 py-20 lg:min-w-0 lg:px-0">
+              <div className="absolute inset-x-4 top-1/2 h-px -translate-y-1/2 bg-gray-300 lg:inset-x-0" />
 
-          <div className="relative grid grid-cols-4 gap-4">
+              <div className="relative grid grid-cols-4 gap-4">
             {steps.map((step, index) => (
               <div key={index} className="relative flex flex-col items-center">
                 {step.position === 'up' ? (
@@ -137,6 +139,8 @@ export default function SimpleProcess() {
                 )}
               </div>
             ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

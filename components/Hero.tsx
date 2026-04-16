@@ -4,10 +4,10 @@ import DashboardCards from './DashboardCards'
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-12 lg:py-16">
-      <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+    <section className="mx-auto max-w-7xl min-w-0 px-4 py-10 sm:px-6 sm:py-12 lg:py-16">
+      <div className="grid min-w-0 gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Left Column - Value Proposition */}
-        <div className="flex flex-col justify-center">
+        <div className="flex min-w-0 flex-col justify-center">
           <div className="mb-4">
             <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-100 px-3 py-1 text-xs font-medium text-gray-900">
               <span className="h-1.5 w-1.5 rounded-full bg-gray-900"></span>
@@ -15,7 +15,7 @@ export default function Hero() {
             </span>
           </div>
           
-          <h1 className="mb-4 text-2xl font-bold leading-tight text-gray-900 lg:text-3xl xl:text-4xl">
+          <h1 className="mb-4 text-balance text-2xl font-bold leading-tight text-gray-900 lg:text-3xl xl:text-4xl">
             Your product feed, <span className="text-accent">AI optimized</span>
           </h1>
 
@@ -47,7 +47,7 @@ export default function Hero() {
         </div>
 
         {/* Right Column - Dashboard Cards */}
-        <div className="flex items-center justify-center">
+        <div className="flex min-w-0 items-center justify-center">
           <DashboardCards />
         </div>
       </div>

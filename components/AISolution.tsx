@@ -51,7 +51,7 @@ const solutions = [
 export default function AISolution() {
   return (
     <section className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl min-w-0 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
         {/* Header */}
         <div className="mb-12 text-center">
           <div className="mb-4 flex items-center justify-center">
@@ -59,7 +59,7 @@ export default function AISolution() {
               • The Feed Management Challenge
             </span>
           </div>
-          <h2 className="mb-4 text-3xl font-bold leading-tight text-gray-900 lg:text-4xl">
+          <h2 className="mb-4 text-balance text-2xl font-bold leading-tight text-gray-900 sm:text-3xl lg:text-4xl">
             Feed Management is{' '}
             <span className="text-accent">Complex, Error-Prone, and Time-Consuming</span>
           </h2>
@@ -134,13 +134,13 @@ export default function AISolution() {
         </div>
 
         {/* Key differentiator strip */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3 rounded-2xl border border-accent/30 bg-gradient-to-r from-accent/5 to-accent/10 px-6 py-4">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/20">
+        <div className="mt-10 flex min-w-0 flex-wrap items-center justify-center gap-3 rounded-2xl border border-accent/30 bg-gradient-to-r from-accent/5 to-accent/10 px-4 py-4 sm:px-6">
+          <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/20">
             <svg className="h-4 w-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
             </svg>
           </span>
-          <p className="text-sm font-semibold text-gray-900">
+          <p className="min-w-0 text-center text-sm font-semibold text-gray-900 sm:text-left">
             <span className="text-accent">AI Search Optimization</span>
             <span className="text-gray-600"> — A key proof point of why our AI is more sophisticated than competitors.</span>
           </p>

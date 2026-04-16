@@ -68,7 +68,7 @@ export default function StatsBanner() {
   return (
     <section className="border-t border-gray-200 bg-white">
       {/* Shared width + 3-column tracks so top and bottom dividers line up */}
-      <div className="mx-auto w-full max-w-none px-6 lg:px-10 xl:px-14">
+      <div className="mx-auto w-full min-w-0 max-w-none px-4 sm:px-6 lg:px-10 xl:px-14">
         {/* Top Bar */}
         <div className="border-b border-gray-200 bg-gray-50 py-4 lg:py-5">
           <div className="grid grid-cols-1 divide-y divide-gray-200 text-center md:grid-cols-3 md:divide-x md:divide-y-0">
@@ -95,7 +95,7 @@ export default function StatsBanner() {
                 <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
                   {stat.label}
                 </div>
-                <div className="mb-2 text-4xl font-bold text-gray-900 lg:text-5xl">
+                <div className="mb-2 text-3xl font-bold tabular-nums text-gray-900 sm:text-4xl lg:text-5xl">
                   {stat.prefix}
                   {countedValues[index]}
                   {stat.suffix}

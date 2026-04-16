@@ -86,9 +86,9 @@ const socialIcons = [
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-8">
+      <div className="mx-auto max-w-7xl min-w-0 px-4 py-8 sm:px-6">
         {/* Top Section - Logo and Social Icons */}
-        <div className="mb-6 flex flex-col items-center justify-between gap-4 md:flex-row md:items-center">
+        <div className="mb-6 flex min-w-0 flex-col items-center justify-between gap-4 md:flex-row md:items-center">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="flex h-6 w-6 items-center justify-center bg-accent">
@@ -100,7 +100,7 @@ export default function Footer() {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex items-center md:ml-auto">
+          <div className="flex max-w-full items-center justify-center overflow-x-auto pb-1 md:ml-auto md:justify-end">
             {socialIcons.map((social, index) => (
               <a
                 key={index}
@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Links Grid */}
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+        <div className="grid min-w-0 grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-2 md:grid-cols-4">
           {/* Product Column */}
           <div>
             <h3 className="mb-1 text-xs font-semibold text-gray-500">Product</h3>

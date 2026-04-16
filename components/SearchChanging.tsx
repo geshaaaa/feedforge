@@ -36,30 +36,30 @@ const stats = [
 export default function SearchChanging() {
   return (
     <section className="border-t border-gray-200 bg-white">
-      <div className="mx-auto w-full max-w-none px-6 py-16 lg:px-10 lg:py-20 xl:px-14">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
+      <div className="mx-auto w-full min-w-0 max-w-none px-4 py-12 sm:px-6 sm:py-16 lg:px-10 lg:py-20 xl:px-14">
+        <div className="grid min-w-0 gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
           {/* Left Column - Heading and Description */}
-          <div>
+          <div className="min-w-0">
             <div className="mb-4 flex items-center justify-center lg:justify-start">
               <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-900">
                 • Market Shift in Progress
               </span>
             </div>
-            <h2 className="mb-4 text-3xl font-bold leading-tight text-gray-900 lg:text-4xl xl:text-5xl">
+            <h2 className="mb-4 text-balance text-3xl font-bold leading-tight text-gray-900 lg:text-4xl xl:text-5xl">
               Why Your Feed Quality{' '}
               <span className="text-accent">Matters</span>
             </h2>
-            <p className="text-sm leading-relaxed text-gray-700">
+            <p className="text-pretty text-sm leading-relaxed text-gray-700">
               Your product feed touches every channel — Google Shopping, Meta ads, Amazon, and now AI assistants. Bad data means missed sales everywhere.
             </p>
           </div>
 
-          {/* Right Column - Stats Cards */}
-          <div className="flex flex-row items-center justify-center gap-6">
+          {/* Right Column - Stats Cards (md+ three-column so fixed circles do not overflow) */}
+          <div className="grid w-full min-w-0 grid-cols-1 justify-items-center gap-6 md:grid-cols-3 md:justify-items-center md:gap-4 lg:gap-6">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="relative flex aspect-square w-48 items-center justify-center rounded-full border border-gray-200 bg-white px-5 py-6 shadow-sm transition-all duration-300 hover:border-gray-900 hover:shadow-md hover:-translate-y-1"
+                className="relative box-border flex aspect-square w-full max-w-[11rem] items-center justify-center rounded-full border border-gray-200 bg-white px-3 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gray-900 hover:shadow-md sm:px-4 sm:py-5 md:max-w-full md:px-3 md:py-4 lg:max-w-[12rem] lg:px-4 lg:py-5"
               >
                 <div className="flex max-w-[90%] flex-col items-center justify-center text-center">
                   <div className="mb-1.5 shrink-0 text-gray-900" aria-hidden>
@@ -86,11 +86,11 @@ export default function SearchChanging() {
             {/* Legacy Keyword Strategy Container */}
             <div className="flex h-full min-h-0 flex-col border border-gray-200 bg-white p-6 shadow-sm lg:p-7">
               <div className="mb-4">
-                <div className="flex items-center gap-3">
-                  <span className="bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+                  <span className="w-fit bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
                     THE CHALLENGE
                   </span>
-                  <h3 className="text-xl font-bold text-gray-900">Legacy Keyword Strategy</h3>
+                  <h3 className="min-w-0 text-lg font-bold text-gray-900 sm:text-xl">Legacy Keyword Strategy</h3>
                 </div>
               </div>
 
@@ -123,8 +123,8 @@ export default function SearchChanging() {
 
               {/* Legacy sub-cards — equal height + hover */}
               <div className="mt-auto flex min-h-0 flex-1 flex-col pt-2">
-                <div className="grid min-h-0 flex-1 grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-3">
-                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                <div className="grid min-h-0 flex-1 grid-cols-1 gap-3 md:grid-cols-3 md:gap-3">
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md md:min-h-0">
                     <div className="shrink-0 text-xl font-bold text-accent">46%</div>
                     <p className="my-2 flex flex-1 items-center text-xs leading-snug text-gray-700">
                       Revenue drop when AI search appears
@@ -133,7 +133,7 @@ export default function SearchChanging() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                   </div>
-                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md md:min-h-0">
                     <div className="shrink-0 text-xl font-bold text-accent">77%</div>
                     <p className="my-2 flex flex-1 items-center text-xs leading-snug text-gray-700">
                       Customers use AI for discovery
@@ -142,7 +142,7 @@ export default function SearchChanging() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                   </div>
-                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md md:min-h-0">
                     <div className="shrink-0 text-xl font-bold text-accent">90M+</div>
                     <p className="my-2 flex flex-1 items-center text-xs leading-snug text-gray-700">
                       Will rely on AI search by 2027
@@ -158,11 +158,11 @@ export default function SearchChanging() {
             {/* AI-Native Optimization Container */}
             <div className="flex h-full min-h-0 flex-col border border-gray-200 bg-white p-6 shadow-sm lg:p-7">
               <div className="mb-4">
-                <div className="flex items-center gap-3">
-                  <span className="bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+                  <span className="w-fit bg-gray-100 border border-gray-300 px-3 py-1 text-xs font-medium text-gray-900">
                     THE SOLUTION
                   </span>
-                  <h3 className="text-xl font-bold text-gray-900">AI-Native Optimization</h3>
+                  <h3 className="min-w-0 text-lg font-bold text-gray-900 sm:text-xl">AI-Native Optimization</h3>
                 </div>
               </div>
 
@@ -194,8 +194,8 @@ export default function SearchChanging() {
 
               {/* Solution sub-cards — same structure/heights as challenge row */}
               <div className="mt-auto flex min-h-0 flex-1 flex-col pt-2">
-                <div className="grid min-h-0 flex-1 grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-3">
-                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                <div className="grid min-h-0 flex-1 grid-cols-1 gap-3 md:grid-cols-3 md:gap-3">
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md md:min-h-0">
                     <svg className="mb-2 h-5 w-5 shrink-0 text-accent transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
@@ -204,7 +204,7 @@ export default function SearchChanging() {
                       Built for conversational search
                     </p>
                   </div>
-                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md md:min-h-0">
                     <svg className="mb-2 h-5 w-5 shrink-0 text-accent transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
@@ -213,7 +213,7 @@ export default function SearchChanging() {
                       Managed from one central dashboard
                     </p>
                   </div>
-                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md sm:min-h-0">
+                  <div className="group flex h-full min-h-[10.5rem] flex-col items-center border border-accent bg-accent/5 p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent/10 hover:shadow-md md:min-h-0">
                     <svg className="mb-2 h-5 w-5 shrink-0 text-accent transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>

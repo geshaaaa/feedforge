@@ -22,11 +22,11 @@ export default function CatalogPerfection() {
 
   return (
     <section className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:py-16">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto max-w-7xl min-w-0 px-4 py-10 sm:px-6 sm:py-12 lg:py-16">
+        <div className="grid min-w-0 gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Column */}
-          <div className="flex flex-col justify-center">
-            <h2 className="mb-4 text-3xl font-bold leading-tight text-gray-900 lg:text-4xl">
+          <div className="flex min-w-0 flex-col justify-center">
+            <h2 className="mb-4 text-balance text-2xl font-bold leading-tight text-gray-900 sm:text-3xl lg:text-4xl">
               instant catalog <span className="text-accent">perfection</span>
             </h2>
             
@@ -61,13 +61,13 @@ export default function CatalogPerfection() {
           </div>
 
           {/* Right Column */}
-          <div className="flex items-center justify-center">
-            <div className="w-full max-w-2xl border border-gray-200 bg-white shadow-sm transition-all duration-700 ease-in-out hover:border-accent hover:shadow-2xl hover:-translate-y-1">
+          <div className="flex min-w-0 items-center justify-center">
+            <div className="w-full min-w-0 max-w-2xl border border-gray-200 bg-white shadow-sm transition-all duration-700 ease-in-out hover:border-accent hover:shadow-2xl hover:-translate-y-1">
               {/* Tabs */}
-              <div className="flex border-b border-gray-200">
+              <div className="flex min-w-0 border-b border-gray-200">
                 <button
                   onClick={() => setActiveTab('examples')}
-                  className={`flex-1 px-6 py-4 text-sm font-medium transition-colors duration-300 ${
+                  className={`min-w-0 flex-1 px-3 py-3 text-xs font-medium transition-colors duration-300 sm:px-6 sm:py-4 sm:text-sm ${
                     activeTab === 'examples'
                       ? 'border-b-2 border-accent text-accent'
                       : 'text-gray-500 hover:text-accent'
@@ -77,7 +77,7 @@ export default function CatalogPerfection() {
                 </button>
                 <button
                   onClick={() => setActiveTab('try')}
-                  className={`flex-1 px-6 py-4 text-sm font-medium transition-colors duration-300 ${
+                  className={`min-w-0 flex-1 px-3 py-3 text-xs font-medium transition-colors duration-300 sm:px-6 sm:py-4 sm:text-sm ${
                     activeTab === 'try'
                       ? 'border-b-2 border-accent text-accent'
                       : 'text-gray-500 hover:text-accent'
@@ -88,7 +88,7 @@ export default function CatalogPerfection() {
               </div>
 
               {/* Tab Content */}
-              <div className="p-6">
+              <div className="min-w-0 p-4 sm:p-6">
                 {activeTab === 'examples' ? (
                   <div className="space-y-6">
                     {/* Raw Data Input */}
@@ -120,7 +120,7 @@ export default function CatalogPerfection() {
                       </div>
                       <div className="space-y-4 rounded-lg border border-gray-200 bg-gray-50 p-4 transition-all duration-500 hover:border-gray-300 hover:bg-gray-100 hover:shadow-md">
                         <div>
-                          <div className="mb-2 text-lg font-bold text-accent">
+                          <div className="mb-2 break-words text-base font-bold text-accent sm:text-lg">
                             {exampleData.optimizedTitle}
                           </div>
                           <div className="mb-4 text-sm leading-relaxed text-gray-700">

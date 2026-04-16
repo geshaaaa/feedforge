@@ -46,10 +46,10 @@ const features = [
 export default function ComplexTechnology() {
   return (
     <section className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl min-w-0 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
         {/* Header */}
-        <div className="mb-6">
-          <div className="mb-4 flex items-center gap-2">
+        <div className="mb-6 min-w-0">
+          <div className="mb-4 flex min-w-0 flex-wrap items-center gap-2">
             <div className="flex h-5 w-5 items-center justify-center rounded bg-gray-100">
               <svg className="h-3 w-3 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -60,7 +60,7 @@ export default function ComplexTechnology() {
             </span>
           </div>
           
-          <h2 className="mb-4 text-3xl font-bold leading-tight text-gray-900 lg:text-4xl">
+          <h2 className="mb-4 text-balance text-2xl font-bold leading-tight text-gray-900 sm:text-3xl lg:text-4xl">
             Complex technology,{' '}
             <span className="text-accent">simple growth.</span>
           </h2>

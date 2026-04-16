@@ -60,14 +60,14 @@ export default function DashboardCards() {
   const maxValue = Math.max(...data.map((d) => d.value), 100)
 
   return (
-    <div className="w-full max-w-2xl border border-gray-200 bg-white p-6 shadow-lg">
+    <div className="w-full min-w-0 max-w-2xl border border-gray-200 bg-white p-4 shadow-lg sm:p-6">
       {/* Header */}
-      <div className="mb-4 flex items-center justify-between">
-        <div>
+      <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="min-w-0">
           <h3 className="text-sm font-semibold text-gray-900">Live Performance Metrics</h3>
           <p className="mt-0.5 text-xs text-gray-500">Real-time data updates</p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           {/* Live indicator */}
           <div className="flex items-center gap-1.5">
             <div className="relative">
@@ -86,21 +86,21 @@ export default function DashboardCards() {
       </div>
 
       {/* Current Stats */}
-      <div className="mb-6 grid grid-cols-3 gap-4 border-b border-gray-100 pb-4">
-        <div>
-          <div className="text-xs text-gray-500">Current Value</div>
-          <div className="mt-1 text-2xl font-bold text-accent">{currentValue}</div>
+      <div className="mb-6 grid min-w-0 grid-cols-3 gap-2 border-b border-gray-100 pb-4 sm:gap-4">
+        <div className="min-w-0">
+          <div className="text-[10px] text-gray-500 sm:text-xs">Current Value</div>
+          <div className="mt-1 truncate text-lg font-bold tabular-nums text-accent sm:text-2xl">{currentValue}</div>
         </div>
-        <div>
-          <div className="text-xs text-gray-500">Change</div>
-          <div className={`mt-1 text-xl font-bold ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+        <div className="min-w-0">
+          <div className="text-[10px] text-gray-500 sm:text-xs">Change</div>
+          <div className={`mt-1 truncate text-base font-bold tabular-nums sm:text-xl ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
             {change >= 0 ? '+' : ''}
             {change.toFixed(1)}
           </div>
         </div>
-        <div>
-          <div className="text-xs text-gray-500">Change %</div>
-          <div className={`mt-1 text-xl font-bold ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+        <div className="min-w-0">
+          <div className="text-[10px] text-gray-500 sm:text-xs">Change %</div>
+          <div className={`mt-1 truncate text-base font-bold tabular-nums sm:text-xl ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
             {change >= 0 ? '+' : ''}
             {changePercent}%
           </div>
@@ -108,7 +108,7 @@ export default function DashboardCards() {
       </div>
 
       {/* Graph */}
-      <div className="relative h-64 w-full">
+      <div className="relative h-48 w-full min-w-0 sm:h-64">
         <svg className="h-full w-full" viewBox="0 0 800 200" preserveAspectRatio="none">
           {/* Grid lines */}
           {[0, 25, 50, 75, 100].map((y) => (
@@ -211,7 +211,7 @@ export default function DashboardCards() {
         </div>
 
         {/* X-axis labels */}
-        <div className="absolute bottom-0 left-0 flex w-full justify-between px-2 text-xs text-gray-500">
+        <div className="absolute bottom-0 left-0 flex w-full min-w-0 justify-between gap-1 overflow-x-auto px-1 text-[10px] text-gray-500 sm:px-2 sm:text-xs">
           {data.filter((_, i) => i % 3 === 0 || i === data.length - 1).map((point, index) => (
             <span key={index}>{point.name}</span>
           ))}

@@ -26,11 +26,11 @@ export default function DemoRequest() {
 
   return (
     <section id="request-demo" className="scroll-mt-20 border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto max-w-7xl min-w-0 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+        <div className="grid min-w-0 gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Side - Form */}
-          <div>
-            <h2 className="mb-6 text-2xl font-bold text-gray-900 lg:text-3xl">
+          <div className="min-w-0">
+            <h2 className="mb-6 text-balance text-xl font-bold text-gray-900 sm:text-2xl lg:text-3xl">
               Request a Demo
             </h2>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -102,7 +102,7 @@ export default function DemoRequest() {
           </div>
 
           {/* Right Side - Content */}
-          <div className="flex flex-col justify-center">
+          <div className="flex min-w-0 flex-col justify-center">
             <div className="mb-4 flex items-center gap-2">
               <div className="flex h-5 w-5 items-center justify-center rounded bg-gray-100">
                 <svg className="h-3 w-3 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">

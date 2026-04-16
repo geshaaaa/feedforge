@@ -15,8 +15,8 @@ const duplicatedLogos = [...logos, ...logos, ...logos]
 
 export default function LogoCarousel() {
   return (
-    <section className="border-t border-gray-200 bg-white py-6 overflow-hidden">
-      <div className="relative mx-auto w-full max-w-4xl">
+    <section className="overflow-hidden border-t border-gray-200 bg-white py-6">
+      <div className="relative mx-auto w-full min-w-0 max-w-4xl px-4 sm:px-6">
         <div className="flex animate-scroll">
           {duplicatedLogos.map((logo, index) => (
             <div

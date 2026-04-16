@@ -47,14 +47,14 @@ export default function WorksWhereYouDo() {
 
   return (
     <section className="border-t border-gray-200 bg-white">
-      <div className="mx-auto w-full max-w-none px-6 py-12 lg:px-10 lg:py-16 xl:px-14">
-        <div className="relative grid w-full grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start lg:gap-x-12 lg:gap-y-0 xl:gap-x-16">
+      <div className="mx-auto w-full min-w-0 max-w-none px-4 py-10 sm:px-6 sm:py-12 lg:px-10 lg:py-16 xl:px-14">
+        <div className="relative grid w-full min-w-0 grid-cols-1 gap-10 sm:gap-12 lg:grid-cols-2 lg:items-start lg:gap-x-12 lg:gap-y-0 xl:gap-x-16">
           {/* Vertical Separator Line */}
           <div className="pointer-events-none absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gray-200 lg:block" aria-hidden />
           
           {/* Left Column - Works where you do */}
           <div className="min-w-0">
-            <h2 className="mb-3 text-2xl font-bold text-accent lg:text-3xl">
+            <h2 className="mb-3 text-balance text-xl font-bold text-accent sm:text-2xl lg:text-3xl">
               Works where you do
             </h2>
             <p className="mb-4 text-sm text-gray-600">
@@ -101,7 +101,7 @@ export default function WorksWhereYouDo() {
 
           {/* Right Column - Enterprise-ready AI */}
           <div className="min-w-0">
-            <h2 className="mb-3 text-2xl font-bold text-accent lg:text-3xl">
+            <h2 className="mb-3 text-balance text-xl font-bold text-accent sm:text-2xl lg:text-3xl">
               Enterprise-ready AI
             </h2>
             <p className="mb-4 text-sm text-gray-600">
@@ -112,7 +112,7 @@ export default function WorksWhereYouDo() {
             </button>
 
             {/* Features — fill column width on large screens */}
-            <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-3 lg:min-h-[7rem]">
+            <div className="grid w-full min-w-0 grid-cols-1 gap-3 md:grid-cols-3 md:gap-3 lg:min-h-[7rem]">
               {enterpriseFeatures.map((feature, index) => (
                 <div
                   key={index}
