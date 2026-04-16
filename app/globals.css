@@ -40,3 +40,218 @@ th {
 .nav-family {
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
 }
+
+/* Dark theme: white → black, accent (blue) → white */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #000000;
+  color: #f3f4f6;
+}
+
+html.dark .bg-white {
+  background-color: #000000 !important;
+}
+
+html.dark .bg-gray-50 {
+  background-color: #0a0a0a !important;
+}
+
+html.dark .bg-gray-50\/80 {
+  background-color: rgb(10 10 10 / 0.8) !important;
+}
+
+html.dark .bg-gray-50\/50 {
+  background-color: rgb(10 10 10 / 0.5) !important;
+}
+
+html.dark .bg-gray-100 {
+  background-color: #141414 !important;
+}
+
+html.dark .text-gray-900 {
+  color: #f9fafb !important;
+}
+
+html.dark .text-gray-800 {
+  color: #f3f4f6 !important;
+}
+
+html.dark .text-gray-700 {
+  color: #e5e7eb !important;
+}
+
+html.dark .text-gray-600 {
+  color: #d1d5db !important;
+}
+
+html.dark .text-gray-500 {
+  color: #9ca3af !important;
+}
+
+html.dark .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+html.dark .border-gray-100 {
+  border-color: #1f2937 !important;
+}
+
+html.dark .border-gray-200 {
+  border-color: #374151 !important;
+}
+
+html.dark .border-gray-300 {
+  border-color: #4b5563 !important;
+}
+
+html.dark .text-accent {
+  color: #ffffff !important;
+}
+
+html.dark .border-accent {
+  border-color: #ffffff !important;
+}
+
+html.dark .bg-accent {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+html.dark .bg-accent .text-white {
+  color: #000000 !important;
+}
+
+html.dark .hover\:bg-\[\#070066\]:hover {
+  background-color: #e5e7eb !important;
+  color: #000000 !important;
+}
+
+html.dark .bg-accent\/5 {
+  background-color: rgb(255 255 255 / 0.06) !important;
+}
+
+html.dark .bg-accent\/10 {
+  background-color: rgb(255 255 255 / 0.1) !important;
+}
+
+html.dark .bg-accent\/15 {
+  background-color: rgb(255 255 255 / 0.14) !important;
+}
+
+html.dark .bg-accent\/20 {
+  background-color: rgb(255 255 255 / 0.18) !important;
+}
+
+html.dark .bg-accent\/30 {
+  background-color: rgb(255 255 255 / 0.22) !important;
+}
+
+html.dark .ring-accent\/20 {
+  --tw-ring-color: rgb(255 255 255 / 0.25) !important;
+}
+
+html.dark .shadow-accent\/10 {
+  --tw-shadow-color: rgb(255 255 255 / 0.12) !important;
+}
+
+html.dark .shadow-accent\/25 {
+  --tw-shadow-color: rgb(255 255 255 / 0.2) !important;
+}
+
+html.dark .from-white {
+  --tw-gradient-from: #000000 var(--tw-gradient-from-position) !important;
+}
+
+html.dark .via-white {
+  --tw-gradient-stops: var(--tw-gradient-from), #000000 var(--tw-gradient-via-position),
+    var(--tw-gradient-to) !important;
+}
+
+html.dark [class*='from-accent/'] {
+  --tw-gradient-from: rgb(255 255 255 / 0.08) var(--tw-gradient-from-position) !important;
+}
+
+html.dark [class*='to-accent/'] {
+  --tw-gradient-to: rgb(255 255 255 / 0.12) var(--tw-gradient-to-position) !important;
+}
+
+html.dark [class*='via-accent/'] {
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(255 255 255 / 0.06) var(--tw-gradient-via-position),
+    var(--tw-gradient-to) !important;
+}
+
+html.dark .from-accent\/\[0\.07\] {
+  --tw-gradient-from: rgb(255 255 255 / 0.08) var(--tw-gradient-from-position) !important;
+}
+
+html.dark .to-accent\/\[0\.04\] {
+  --tw-gradient-to: rgb(255 255 255 / 0.06) var(--tw-gradient-to-position) !important;
+}
+
+html.dark .to-accent\/\[0\.06\] {
+  --tw-gradient-to: rgb(255 255 255 / 0.08) var(--tw-gradient-to-position) !important;
+}
+
+html.dark .hover\:bg-gray-50:hover {
+  background-color: #1a1a1a !important;
+}
+
+html.dark .hover\:bg-gray-100:hover {
+  background-color: #1f1f1f !important;
+}
+
+html.dark .hover\:bg-accent:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+html.dark .hover\:text-accent:hover {
+  color: #ffffff !important;
+}
+
+html.dark .hover\:text-white:hover {
+  color: #000000 !important;
+}
+
+html.dark .hover\:border-accent:hover {
+  border-color: #ffffff !important;
+}
+
+html.dark .hover\:border-gray-900:hover {
+  border-color: #e5e7eb !important;
+}
+
+html.dark .focus\:border-accent:focus {
+  border-color: #ffffff !important;
+}
+
+html.dark .focus\:ring-accent\/20:focus {
+  --tw-ring-color: rgb(255 255 255 / 0.25) !important;
+}
+
+html.dark .focus-visible\:ring-accent:focus-visible {
+  --tw-ring-color: #ffffff !important;
+}
+
+html.dark .focus-visible\:ring-offset-2:focus-visible {
+  --tw-ring-offset-color: #000000 !important;
+}
+
+html.dark .placeholder-gray-400::placeholder {
+  color: #6b7280 !important;
+}
+
+html.dark .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #374151 !important;
+}
+
+html.dark .bg-gray-300 {
+  background-color: #4b5563 !important;
+}
+
+html.dark .bg-gray-900 {
+  background-color: #e5e7eb !important;
+}
