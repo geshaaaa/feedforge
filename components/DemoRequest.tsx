@@ -25,7 +25,7 @@ export default function DemoRequest() {
   }
 
   return (
-    <section className="border-t border-gray-200 bg-white">
+    <section id="request-demo" className="scroll-mt-20 border-t border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Side - Form */}

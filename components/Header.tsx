@@ -1,18 +1,24 @@
 'use client'
 
+import Link from 'next/link'
+
 export default function Header() {
   return (
     <header className="w-full border-b border-gray-200 bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <Link
+          href="/"
+          className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+          aria-label="FeedForge home"
+        >
           <div className="flex h-6 w-6 items-center justify-center bg-accent">
             <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
           </div>
           <span className="font-vector text-lg font-semibold text-gray-900">FeedForge</span>
-        </div>
+        </Link>
 
         {/* Navigation */}
         <nav className="hidden items-center gap-8 md:flex nav-family">
@@ -22,15 +28,15 @@ export default function Header() {
           <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
             Docs
           </a>
-          <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
+          <Link href="/customers" className="text-sm font-medium text-gray-700 hover:text-accent">
             Customers
-          </a>
+          </Link>
           <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
             Resources
           </a>
-          <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
+          <Link href="/pricing" className="text-sm font-medium text-gray-700 hover:text-accent">
             Pricing
-          </a>
+          </Link>
         </nav>
 
         {/* Right side actions */}
