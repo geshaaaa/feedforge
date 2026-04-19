@@ -9,17 +9,19 @@ export default function Hero() {
         {/* Left Column - Value Proposition */}
         <div className="flex min-w-0 flex-col justify-center">
           <div className="mb-4">
-            <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-100 px-3 py-1 text-xs font-medium text-gray-900">
-              <span className="h-1.5 w-1.5 rounded-full bg-gray-900"></span>
-              AI-powered product feeds for every channel
+            <span className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-gray-200 bg-gray-100 px-3 py-1 text-[0.6875rem] font-medium text-gray-900 sm:text-xs">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gray-900"></span>
+              <span className="min-w-0 text-pretty">
+                AI-powered product feeds for every channel
+              </span>
             </span>
           </div>
           
-          <h1 className="mb-4 text-balance text-2xl font-bold leading-tight text-gray-900 lg:text-3xl xl:text-4xl">
+          <h1 className="mb-4 text-balance text-xl font-bold leading-tight text-gray-900 sm:text-2xl lg:text-3xl xl:text-4xl">
             Your product feed, <span className="text-accent">AI optimized</span>
           </h1>
 
-          <p className="mb-8 text-sm text-gray-600">
+          <p className="mb-8 text-pretty text-sm text-gray-600 sm:text-base">
             Transform your product catalog into high-performing listings across Google, Meta, and every marketplace — including the AI-powered channels reshaping how customers discover products.
           </p>
 

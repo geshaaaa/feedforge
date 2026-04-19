@@ -118,7 +118,7 @@ export default function DemoRequest() {
               See Feedforge in action
             </h3>
 
-            <p className="mb-6 text-base text-gray-600">
+            <p className="mb-6 text-sm text-gray-600 sm:text-base">
               Schedule a personalized demo to see how Feedforge can transform your commerce experience. Our team will show you how our AI-powered platform can drive growth and optimize your revenue channels.
             </p>
 

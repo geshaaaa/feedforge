@@ -26,7 +26,7 @@ export default function CatalogPerfection() {
         <div className="grid min-w-0 gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Column */}
           <div className="flex min-w-0 flex-col justify-center">
-            <h2 className="mb-4 text-balance text-2xl font-bold leading-tight text-gray-900 sm:text-3xl lg:text-4xl">
+            <h2 className="mb-4 text-balance text-xl font-bold leading-tight text-gray-900 sm:text-2xl md:text-3xl lg:text-4xl">
               instant catalog <span className="text-accent">perfection</span>
             </h2>
             

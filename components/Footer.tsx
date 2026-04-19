@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Links Grid */}
-        <div className="grid min-w-0 grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid min-w-0 grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 md:grid-cols-4">
           {/* Product Column */}
           <div>
             <h3 className="mb-1 text-xs font-semibold text-gray-500">Product</h3>

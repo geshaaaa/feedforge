@@ -46,18 +46,21 @@ export default function StartBuilding() {
             <h3 className="shrink-0 text-center text-sm font-semibold text-gray-900 sm:text-left">
               Subscribe to FeedForge
             </h3>
-            <form onSubmit={handleSubscribe} className="flex min-w-0 w-full max-w-md sm:w-auto">
+            <form
+              onSubmit={handleSubscribe}
+              className="flex min-w-0 w-full max-w-md flex-col gap-0 sm:w-auto sm:flex-row sm:gap-0"
+            >
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email Address"
                 required
-                className="flex-1 border border-r-0 border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400 transition-all duration-300 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                className="min-w-0 flex-1 border border-gray-300 bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400 transition-all duration-300 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 sm:border-r-0"
               />
               <button
                 type="submit"
-                className="border border-l-0 border-accent bg-accent px-6 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#070066]"
+                className="w-full shrink-0 border border-t-0 border-accent bg-accent px-6 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#070066] sm:w-auto sm:border-l-0 sm:border-t sm:border-accent"
               >
                 Subscribe
               </button>

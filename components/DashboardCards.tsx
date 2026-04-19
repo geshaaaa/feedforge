@@ -107,9 +107,9 @@ export default function DashboardCards() {
         </div>
       </div>
 
-      {/* Graph */}
-      <div className="relative h-48 w-full min-w-0 sm:h-64">
-        <svg className="h-full w-full" viewBox="0 0 800 200" preserveAspectRatio="none">
+      {/* Graph — pl reserves space for Y-axis labels on narrow viewports */}
+      <div className="relative h-44 w-full min-w-0 pl-7 sm:h-64 sm:pl-8">
+        <svg className="h-full w-full min-w-0" viewBox="0 0 800 200" preserveAspectRatio="none">
           {/* Grid lines */}
           {[0, 25, 50, 75, 100].map((y) => (
             <line
@@ -202,7 +202,7 @@ export default function DashboardCards() {
         </svg>
 
         {/* Y-axis labels */}
-        <div className="absolute left-0 top-0 flex h-full flex-col justify-between py-2 text-xs text-gray-500">
+        <div className="pointer-events-none absolute left-0 top-0 flex h-full w-6 flex-col justify-between py-2 text-[10px] text-gray-500 sm:w-7 sm:text-xs">
           <span>{maxValue}</span>
           <span>{Math.floor(maxValue * 0.75)}</span>
           <span>{Math.floor(maxValue * 0.5)}</span>
@@ -219,7 +219,7 @@ export default function DashboardCards() {
       </div>
 
       {/* Legend */}
-      <div className="mt-4 flex items-center justify-center gap-4 text-xs text-gray-600">
+      <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-gray-600">
         <div className="flex items-center gap-1.5">
           <div className="h-3 w-3 rounded-full bg-accent"></div>
           <span>Performance Score</span>

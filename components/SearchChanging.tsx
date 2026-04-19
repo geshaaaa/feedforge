@@ -45,7 +45,7 @@ export default function SearchChanging() {
                 • Market Shift in Progress
               </span>
             </div>
-            <h2 className="mb-4 text-balance text-3xl font-bold leading-tight text-gray-900 lg:text-4xl xl:text-5xl">
+            <h2 className="mb-4 text-balance text-2xl font-bold leading-tight text-gray-900 sm:text-3xl lg:text-4xl xl:text-5xl">
               Why Your Feed Quality{' '}
               <span className="text-accent">Matters</span>
             </h2>
@@ -59,7 +59,7 @@ export default function SearchChanging() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="relative box-border flex aspect-square w-full max-w-[11rem] items-center justify-center rounded-full border border-gray-200 bg-white px-3 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gray-900 hover:shadow-md sm:px-4 sm:py-5 md:max-w-full md:px-3 md:py-4 lg:max-w-[12rem] lg:px-4 lg:py-5"
+                className="relative box-border flex aspect-square w-full max-w-[11rem] items-center justify-center rounded-full border border-gray-200 bg-white px-3 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gray-900 hover:shadow-md sm:max-w-[13rem] sm:px-4 sm:py-5 md:max-w-full md:px-3 md:py-4 lg:max-w-[12rem] lg:px-4 lg:py-5"
               >
                 <div className="flex max-w-[90%] flex-col items-center justify-center text-center">
                   <div className="mb-1.5 shrink-0 text-gray-900" aria-hidden>

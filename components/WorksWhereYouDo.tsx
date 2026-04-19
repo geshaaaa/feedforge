@@ -46,7 +46,7 @@ export default function WorksWhereYouDo() {
   const duplicatedLogos = [...integrationLogos, ...integrationLogos, ...integrationLogos]
 
   return (
-    <section className="border-t border-gray-200 bg-white">
+    <section className="overflow-x-hidden border-t border-gray-200 bg-white">
       <div className="mx-auto w-full min-w-0 max-w-none px-4 py-10 sm:px-6 sm:py-12 lg:px-10 lg:py-16 xl:px-14">
         <div className="relative grid w-full min-w-0 grid-cols-1 gap-10 sm:gap-12 lg:grid-cols-2 lg:items-start lg:gap-x-12 lg:gap-y-0 xl:gap-x-16">
           {/* Vertical Separator Line */}

@@ -69,9 +69,9 @@ export default function AISolution() {
         </div>
 
         {/* Column headings */}
-        <div className="grid grid-cols-1 gap-6 border-b border-gray-200 pb-6 lg:grid-cols-2 lg:gap-10">
-          <h3 className="text-xl font-bold text-gray-900">Operational Challenges</h3>
-          <h3 className="text-xl font-bold text-gray-900">
+        <div className="grid grid-cols-1 gap-4 border-b border-gray-200 pb-6 text-center sm:text-left lg:grid-cols-2 lg:gap-10">
+          <h3 className="text-lg font-bold text-gray-900 sm:text-xl">Operational Challenges</h3>
+          <h3 className="text-lg font-bold text-gray-900 sm:text-xl">
             <span className="text-accent">FeedForge Solution</span>
           </h3>
         </div>

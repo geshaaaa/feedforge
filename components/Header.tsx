@@ -40,9 +40,12 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden items-center gap-8 md:flex nav-family">
-          <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
-            Product
-          </a>
+          <Link href="/" className="text-sm font-medium text-gray-700 hover:text-accent">
+            Home
+          </Link>
+          <Link href="/products" className="text-sm font-medium text-gray-700 hover:text-accent">
+            Products
+          </Link>
           <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent">
             Docs
           </a>
@@ -102,7 +105,7 @@ export default function Header() {
         </div>
 
         {/* Mobile: compact actions + menu */}
-        <div className="flex shrink-0 items-center gap-2 md:hidden">
+        <div className="flex shrink-0 items-center justify-end gap-1 min-[400px]:gap-2 md:hidden">
           <button className="flex h-10 w-10 items-center justify-center border border-gray-300 bg-white text-gray-600 transition-colors hover:bg-gray-50 hover:text-gray-900">
             <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -160,9 +163,12 @@ export default function Header() {
       {menuOpen && (
         <div className="border-t border-gray-200 bg-white px-4 py-4 shadow-lg md:hidden">
           <nav className="flex flex-col gap-3 nav-family">
-            <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
-              Product
-            </a>
+            <Link href="/" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
+            <Link href="/products" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
+              Products
+            </Link>
             <a href="#" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
               Docs
             </a>

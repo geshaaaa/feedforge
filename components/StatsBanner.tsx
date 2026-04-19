@@ -66,19 +66,19 @@ export default function StatsBanner() {
   }, [hasAnimated])
 
   return (
-    <section className="border-t border-gray-200 bg-white">
+    <section className="min-w-0 border-t border-gray-200 bg-white">
       {/* Shared width + 3-column tracks so top and bottom dividers line up */}
       <div className="mx-auto w-full min-w-0 max-w-none px-4 sm:px-6 lg:px-10 xl:px-14">
         {/* Top Bar */}
         <div className="border-b border-gray-200 bg-gray-50 py-4 lg:py-5">
           <div className="grid grid-cols-1 divide-y divide-gray-200 text-center md:grid-cols-3 md:divide-x md:divide-y-0">
-            <div className="px-3 py-3 text-sm font-medium text-gray-600 sm:px-4 md:py-2 md:px-5 lg:px-6">
+            <div className="break-words px-3 py-3 text-xs font-medium leading-snug text-gray-600 sm:px-4 sm:text-sm md:py-2 md:px-5 lg:px-6">
               TRUSTED BY 500+ MERCHANTS
             </div>
-            <div className="px-3 py-3 text-sm font-medium text-gray-600 sm:px-4 md:py-2 md:px-5 lg:px-6">
+            <div className="break-words px-3 py-3 text-xs font-medium leading-snug text-gray-600 sm:px-4 sm:text-sm md:py-2 md:px-5 lg:px-6">
               $4.2B PROCESSED ANNUALLY
             </div>
-            <div className="px-3 py-3 text-sm font-medium text-gray-600 sm:px-4 md:py-2 md:px-5 lg:px-6">
+            <div className="break-words px-3 py-3 text-xs font-medium leading-snug text-gray-600 sm:px-4 sm:text-sm md:py-2 md:px-5 lg:px-6">
               150+ CHANNELS
             </div>
           </div>

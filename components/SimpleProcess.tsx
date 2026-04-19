@@ -82,8 +82,8 @@ export default function SimpleProcess() {
         </div>
 
         {/* Desktop: timeline process steps — horizontal scroll on md/lg so four columns do not crush */}
-        <div className="relative hidden md:block">
-          <div className="-mx-4 overflow-x-auto pb-2 sm:-mx-6 lg:mx-0 lg:overflow-visible lg:pb-0">
+        <div className="relative hidden min-w-0 md:block">
+          <div className="-mx-4 overflow-x-auto overscroll-x-contain pb-2 sm:-mx-6 lg:mx-0 lg:overflow-visible lg:pb-0">
             <div className="relative min-w-[52rem] px-4 py-20 lg:min-w-0 lg:px-0">
               <div className="absolute inset-x-4 top-1/2 h-px -translate-y-1/2 bg-gray-300 lg:inset-x-0" />
 

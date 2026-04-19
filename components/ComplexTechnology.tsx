@@ -65,7 +65,7 @@ export default function ComplexTechnology() {
             <span className="text-accent">simple growth.</span>
           </h2>
           
-          <p className="text-base text-gray-600">
+          <p className="text-pretty text-sm text-gray-600 sm:text-base">
             Our platform handles the complexity of AI search so you can focus on selling.
           </p>
         </div>
