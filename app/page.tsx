@@ -15,7 +15,7 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen min-w-0 overflow-x-hidden bg-white">
+    <main className="min-h-screen min-w-0 bg-white">
       <Header />
       <Hero />
       <LogoCarousel />

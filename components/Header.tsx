@@ -7,12 +7,20 @@ import SiteLogo from '@/components/SiteLogo'
 export default function Header() {
   const [dark, setDark] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const stored = localStorage.getItem('feedforge-theme')
     const isDark = stored === 'dark'
     document.documentElement.classList.toggle('dark', isDark)
     setDark(isDark)
+  }, [])
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   const toggleTheme = () => {
@@ -23,7 +31,11 @@ export default function Header() {
   }
 
   return (
-    <header className="relative z-40 w-full border-b border-gray-200 bg-white">
+    <header
+      className={`sticky top-0 z-40 w-full border-b border-gray-200 transition-all duration-300 ${
+        scrolled ? 'bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/70' : 'bg-white'
+      }`}
+    >
       <div className="mx-auto flex max-w-7xl min-w-0 items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
         {/* Logo */}
         <SiteLogo className="flex min-w-0" />
