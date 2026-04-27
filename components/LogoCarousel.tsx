@@ -1,13 +1,22 @@
 'use client'
 
 const logos = [
-  { name: 'Workday', text: 'workday' },
-  { name: "L'Oréal", text: "L'ORÉAL" },
-  { name: 'Microsoft', text: 'Microsoft' },
-  { name: 'OpenAI', text: 'OpenAI' },
-  { name: 'Cohere', text: 'cohere' },
-  { name: 'Asana', text: 'asana' },
-  { name: 'Gojek', text: 'GO!' },
+  { name: 'Back in the Saddle', text: 'Back in the Saddle' },
+  { name: 'Catalog Favorites', text: 'Catalog Favorites' },
+  { name: 'Chadwicks', text: 'Chadwicks' },
+  { name: 'Country Store Catalog', text: 'Country Store Catalog' },
+  { name: 'Expressions', text: 'Expressions' },
+  { name: 'In the Company of Dogs', text: 'In the Company of Dogs' },
+  { name: "Magellan's", text: "Magellan's" },
+  { name: "Nature's Jewelry", text: "Nature's Jewelry" },
+  { name: 'North Style', text: 'North Style' },
+  { name: 'Potpourri Gifts', text: 'Potpourri Gifts' },
+  { name: 'Pyramid Collection', text: 'Pyramid Collection' },
+  { name: 'Sagefinds', text: 'Sagefinds' },
+  { name: 'Serengeti Fashions', text: 'Serengeti Fashions' },
+  { name: 'The Stitchery', text: 'The Stitchery' },
+  { name: 'Whatever Works', text: 'Whatever Works' },
+  { name: 'Young Explorers', text: 'Young Explorers' },
 ]
 
 // Duplicate logos for seamless infinite scroll
