@@ -33,8 +33,14 @@ export default function Header() {
           <Link href="/" className="text-sm font-medium text-gray-700 hover:text-accent">
             Home
           </Link>
+          <Link href="/faqs" className="text-sm font-medium text-gray-700 hover:text-accent">
+            FAQs
+          </Link>
           <Link href="/pricing" className="text-sm font-medium text-gray-700 hover:text-accent">
             Pricing
+          </Link>
+          <Link href="/#request-demo" className="text-sm font-medium text-gray-700 hover:text-accent">
+            Contact Us
           </Link>
         </nav>
 
@@ -66,9 +72,6 @@ export default function Header() {
               </svg>
             )}
           </button>
-          <a href="#" className="flex h-10 items-center border border-r-0 border-gray-300 bg-white px-4 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900">
-            Contact
-          </a>
           <button className="flex h-10 items-center border border-r-0 border-gray-300 bg-white px-4 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50">
             Log in
           </button>
@@ -134,8 +137,14 @@ export default function Header() {
             <Link href="/" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
               Home
             </Link>
+            <Link href="/faqs" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
+              FAQs
+            </Link>
             <Link href="/pricing" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
               Pricing
+            </Link>
+            <Link href="/#request-demo" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
+              Contact Us
             </Link>
           </nav>
           <div className="mt-4 flex flex-col gap-2 border-t border-gray-200 pt-4">
