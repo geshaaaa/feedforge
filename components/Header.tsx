@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import SiteLogo from '@/components/SiteLogo'
 
 export default function Header() {
   const [dark, setDark] = useState(false)
@@ -25,18 +26,7 @@ export default function Header() {
     <header className="relative z-40 w-full border-b border-gray-200 bg-white">
       <div className="mx-auto flex max-w-7xl min-w-0 items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex min-w-0 shrink-0 items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
-          aria-label="FeedForge home"
-        >
-          <div className="flex h-6 w-6 shrink-0 items-center justify-center bg-accent">
-            <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-            </svg>
-          </div>
-          <span className="font-vector truncate text-base font-semibold text-gray-900 sm:text-lg">FeedForge</span>
-        </Link>
+        <SiteLogo className="flex min-w-0" />
 
         {/* Navigation */}
         <nav className="hidden items-center gap-8 md:flex nav-family">

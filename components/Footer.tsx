@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import SiteLogo from '@/components/SiteLogo'
 
 const footerLinks = [
   { href: '/', label: 'Home' },
@@ -75,23 +76,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl min-w-0 px-4 py-10 sm:px-6 sm:py-12 lg:py-14">
         <div className="grid min-w-0 gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-24">
           <div className="min-w-0">
-            <Link
-              href="/"
-              className="inline-flex min-w-0 items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
-              aria-label="FeedForge home"
-            >
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center bg-accent">
-                <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                  />
-                </svg>
-              </div>
-              <span className="font-vector text-lg font-semibold tracking-tight text-gray-900">FeedForge</span>
-            </Link>
+            <SiteLogo imgClassName="h-8 w-auto sm:h-9" />
             <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-600">
               AI-optimized product feeds for search, social, and AI-powered discovery.
             </p>
