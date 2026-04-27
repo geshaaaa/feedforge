@@ -85,142 +85,154 @@ export default function PricingPage() {
               titles, descriptions, and channel-ready feeds.
             </p>
 
-            {/* Three-column pricing table */}
+            {/* Three-column pricing table — grid rows align CTAs across tiers */}
             <div className="mx-auto mt-12 max-w-6xl lg:mt-16">
-              <div className="grid grid-cols-1 divide-y divide-gray-200 border border-gray-200 bg-white lg:grid-cols-3 lg:divide-x lg:divide-y-0">
-                {/* Starter */}
-                <div className="flex flex-col px-6 py-8 sm:px-8 sm:py-10 lg:py-12">
-                  <h2 className="text-2xl font-bold text-gray-900">Starter</h2>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                    For trying out FeedForge and small catalogs.
-                  </p>
+              <div className="grid grid-cols-1 border border-gray-200 bg-white lg:grid-cols-3">
+                {/* Starter — column 1 */}
+                <h2 className="order-1 max-lg:border-b-0 px-6 pt-8 text-2xl font-bold text-gray-900 sm:px-8 sm:pt-10 lg:order-none lg:col-start-1 lg:row-start-1 lg:border-r lg:border-gray-200 lg:pt-12">
+                  Starter
+                </h2>
+                <p className="order-2 max-lg:border-b-0 px-6 text-sm leading-relaxed text-gray-600 sm:px-8 lg:order-none lg:col-start-1 lg:row-start-2 lg:border-r lg:border-gray-200">
+                  For trying out FeedForge and small catalogs.
+                </p>
+                <div className="order-3 max-lg:border-b-0 px-6 pt-6 sm:px-8 lg:order-none lg:col-start-1 lg:row-start-3 lg:border-r lg:border-gray-200">
                   <button
                     type="button"
-                    className="mt-6 w-full border border-gray-900 bg-white px-4 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-50"
+                    className="w-full border border-gray-900 bg-white px-4 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-50"
                   >
                     Start for Free
                   </button>
-                  <div className="mt-6">
-                    <p className="text-3xl font-bold text-accent lg:text-4xl">Free</p>
-                    <button
-                      type="button"
-                      className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
-                    >
-                      View included usage
-                      <ChevronDownIcon className="text-accent" />
-                    </button>
-                  </div>
-                  <hr className="my-8 border-gray-200" />
-                  <ul className="flex flex-col gap-4 text-sm leading-snug text-gray-800">
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Core feed connections &amp; channel exports</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>AI title &amp; description suggestions</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>AI Readiness preview (limited SKUs)</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Dashboard metrics &amp; health overview</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Community support &amp; docs</span>
-                    </li>
-                  </ul>
+                </div>
+                <div className="order-4 max-lg:border-b-0 px-6 sm:px-8 lg:order-none lg:col-start-1 lg:row-start-4 lg:border-r lg:border-gray-200">
+                  <p className="text-3xl font-bold text-accent lg:text-4xl">Free</p>
                   <button
                     type="button"
-                    className="mt-8 inline-flex items-center gap-1 self-start text-sm font-medium text-accent hover:underline"
+                    className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
+                  >
+                    View included usage
+                    <ChevronDownIcon className="text-accent" />
+                  </button>
+                </div>
+                <div className="order-5 max-lg:border-b-0 px-6 sm:px-8 lg:order-none lg:col-start-1 lg:row-start-5 lg:border-r lg:border-gray-200">
+                  <hr className="my-8 border-gray-200" />
+                </div>
+                <ul className="order-6 flex max-lg:border-b-0 flex-col gap-4 px-6 text-sm leading-snug text-gray-800 sm:px-8 lg:order-none lg:col-start-1 lg:row-start-6 lg:border-r lg:border-gray-200">
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Core feed connections &amp; channel exports</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>AI title &amp; description suggestions</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>AI Readiness preview (limited SKUs)</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Dashboard metrics &amp; health overview</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Community support &amp; docs</span>
+                  </li>
+                </ul>
+                <div className="order-7 border-b border-gray-200 px-6 pb-8 sm:px-8 sm:pb-10 lg:order-none lg:col-start-1 lg:row-start-7 lg:border-b-0 lg:border-r lg:border-gray-200 lg:pb-12">
+                  <button
+                    type="button"
+                    className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline lg:mt-0"
                   >
                     See example Starter workloads
                     <ChevronDownIcon className="text-accent" />
                   </button>
                 </div>
 
-                {/* Standard — highlighted */}
-                <div className="relative flex flex-col bg-white px-6 py-8 sm:px-8 sm:py-10 lg:py-12">
+                {/* Standard — column 2 */}
+                <div className="order-10 max-lg:border-b-0 bg-white px-6 pt-8 sm:px-8 sm:pt-10 lg:order-none lg:col-start-2 lg:row-start-1 lg:border-r lg:border-gray-200 lg:pt-12">
                   <div className="flex flex-wrap items-center gap-2">
                     <h2 className="text-2xl font-bold text-gray-900">Standard</h2>
                     <span className="border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-900">
                       Popular
                     </span>
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                    For production feeds at any scale.
-                  </p>
+                </div>
+                <p className="order-11 max-lg:border-b-0 bg-white px-6 text-sm leading-relaxed text-gray-600 sm:px-8 lg:order-none lg:col-start-2 lg:row-start-2 lg:border-r lg:border-gray-200">
+                  For production feeds at any scale.
+                </p>
+                <div className="order-12 max-lg:border-b-0 bg-white px-6 pt-6 sm:px-8 lg:order-none lg:col-start-2 lg:row-start-3 lg:border-r lg:border-gray-200">
                   <button
                     type="button"
-                    className="mt-6 w-full border border-accent bg-accent px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#070066]"
+                    className="w-full border border-accent bg-accent px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#070066]"
                   >
                     Start Free Trial
                   </button>
-                  <div className="mt-6">
-                    <p className="text-2xl font-bold leading-tight text-accent sm:text-3xl lg:text-4xl">
-                      $50/month min. usage
-                    </p>
-                    <p className="mt-2 text-xs text-gray-500">3 week trial includes $300 credits</p>
-                  </div>
-                  <hr className="my-8 border-gray-200" />
-                  <ul className="flex flex-col gap-4 text-sm leading-snug text-gray-800">
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Pay-as-you-go beyond minimums</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Unlimited channels &amp; scheduled syncs</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Full AI Readiness Score &amp; remediation</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Import from sheets, PIM, and object storage</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Multiple projects, environments, and users</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>SAML SSO &amp; API key RBAC</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Backup &amp; restore for feed versions</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Prometheus / webhook metrics</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>HIPAA add-on available</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>
-                        Includes free support;{' '}
-                        <span className="font-medium text-accent">Developer</span> or{' '}
-                        <span className="font-medium text-accent">Pro support</span> add-ons for SLAs
-                      </span>
-                    </li>
-                  </ul>
                 </div>
-
-                {/* Enterprise */}
-                <div className="flex flex-col px-6 py-8 sm:px-8 sm:py-10 lg:py-12">
-                  <h2 className="text-2xl font-bold text-gray-900">Enterprise</h2>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                    For mission-critical commerce and AI search programs.
+                <div className="order-13 max-lg:border-b-0 bg-white px-6 sm:px-8 lg:order-none lg:col-start-2 lg:row-start-4 lg:border-r lg:border-gray-200">
+                  <p className="text-2xl font-bold leading-tight text-accent sm:text-3xl lg:text-4xl">
+                    $50/month min. usage
                   </p>
-                  <div className="mt-6 grid grid-cols-1 gap-2 min-[400px]:grid-cols-2">
+                  <p className="mt-2 text-xs text-gray-500">3 week trial includes $300 credits</p>
+                </div>
+                <div className="order-14 max-lg:border-b-0 bg-white px-6 sm:px-8 lg:order-none lg:col-start-2 lg:row-start-5 lg:border-r lg:border-gray-200">
+                  <hr className="my-8 border-gray-200" />
+                </div>
+                <ul className="order-15 flex flex-col gap-4 border-b border-gray-200 bg-white px-6 pb-8 text-sm leading-snug text-gray-800 sm:px-8 sm:pb-10 lg:order-none lg:col-start-2 lg:row-start-6 lg:border-b-0 lg:border-r lg:border-gray-200 lg:pb-12">
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Pay-as-you-go beyond minimums</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Unlimited channels &amp; scheduled syncs</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Full AI Readiness Score &amp; remediation</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Import from sheets, PIM, and object storage</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Multiple projects, environments, and users</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>SAML SSO &amp; API key RBAC</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Backup &amp; restore for feed versions</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Prometheus / webhook metrics</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>HIPAA add-on available</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>
+                      Includes free support;{' '}
+                      <span className="font-medium text-accent">Developer</span> or{' '}
+                      <span className="font-medium text-accent">Pro support</span> add-ons for SLAs
+                    </span>
+                  </li>
+                </ul>
+
+                {/* Enterprise — column 3 */}
+                <h2 className="order-20 max-lg:border-b-0 px-6 pt-8 text-2xl font-bold text-gray-900 sm:px-8 sm:pt-10 lg:order-none lg:col-start-3 lg:row-start-1 lg:pt-12">
+                  Enterprise
+                </h2>
+                <p className="order-21 max-lg:border-b-0 px-6 text-sm leading-relaxed text-gray-600 sm:px-8 lg:order-none lg:col-start-3 lg:row-start-2">
+                  For mission-critical commerce and AI search programs.
+                </p>
+                <div className="order-22 max-lg:border-b-0 px-6 pt-6 sm:px-8 lg:order-none lg:col-start-3 lg:row-start-3">
+                  <div className="grid grid-cols-1 gap-2 min-[400px]:grid-cols-2">
                     <button
                       type="button"
                       className="w-full bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
@@ -234,47 +246,49 @@ export default function PricingPage() {
                       Request Trial
                     </button>
                   </div>
-                  <div className="mt-6">
-                    <p className="text-2xl font-bold leading-tight text-accent sm:text-3xl lg:text-4xl">
-                      $500/month min. usage
-                    </p>
-                  </div>
-                  <hr className="my-8 border-gray-200" />
-                  <ul className="flex flex-col gap-4 text-sm leading-snug text-gray-800">
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Everything in Standard</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>99.95% uptime SLA</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Private networking &amp; VPC options</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Customer-managed encryption keys</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Audit logs &amp; retention policies</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Service accounts &amp; admin APIs</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>HIPAA &amp; compliance packages</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <FeatureCheck />
-                      <span>Pro support included</span>
-                    </li>
-                  </ul>
                 </div>
+                <div className="order-23 max-lg:border-b-0 px-6 sm:px-8 lg:order-none lg:col-start-3 lg:row-start-4">
+                  <p className="text-2xl font-bold leading-tight text-accent sm:text-3xl lg:text-4xl">
+                    $500/month min. usage
+                  </p>
+                </div>
+                <div className="order-24 max-lg:border-b-0 px-6 sm:px-8 lg:order-none lg:col-start-3 lg:row-start-5">
+                  <hr className="my-8 border-gray-200" />
+                </div>
+                <ul className="order-25 flex max-lg:border-b-0 flex-col gap-4 px-6 pb-8 text-sm leading-snug text-gray-800 sm:px-8 sm:pb-10 lg:order-none lg:col-start-3 lg:row-start-6 lg:pb-12">
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Everything in Standard</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>99.95% uptime SLA</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Private networking &amp; VPC options</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Customer-managed encryption keys</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Audit logs &amp; retention policies</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Service accounts &amp; admin APIs</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>HIPAA &amp; compliance packages</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <FeatureCheck />
+                    <span>Pro support included</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
@@ -286,7 +300,10 @@ export default function PricingPage() {
               <div className="border border-gray-200 bg-white">
                 <div className="grid grid-cols-1 divide-y divide-gray-200 lg:grid-cols-3 lg:divide-x lg:divide-y-0">
                   {starterWorkloads.map((col) => (
-                    <div key={col.title} className="flex flex-col px-6 py-8 sm:px-8 sm:py-10">
+                    <div
+                      key={col.title}
+                      className="relative flex flex-col px-6 py-8 transition-[background-color,box-shadow,transform] duration-200 ease-out sm:px-8 sm:py-10 hover:z-[1] hover:bg-accent/[0.06] hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.12)] lg:hover:-translate-y-px"
+                    >
                       <h3 className="text-base font-bold text-gray-900 sm:text-lg">{col.title}</h3>
                       <p className="mt-4 text-sm text-gray-600">{col.contextLabel}</p>
                       <ul className="mt-3 flex flex-col gap-3 text-sm text-gray-800">
