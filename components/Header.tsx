@@ -2,12 +2,19 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import SiteLogo from '@/components/SiteLogo'
 
 export default function Header() {
   const [dark, setDark] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
+
+  const navLinkClass = (href: string) =>
+    `text-sm font-medium transition-colors ${
+      pathname === href ? 'text-accent' : 'text-gray-700 hover:text-accent'
+    }`
 
   useEffect(() => {
     const stored = localStorage.getItem('feedforge-theme')
@@ -33,7 +40,9 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-40 w-full border-b border-gray-200 transition-all duration-300 ${
-        scrolled ? 'bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/70' : 'bg-white'
+        scrolled
+          ? 'bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/70 dark:border-gray-800 dark:bg-gray-950/80 dark:supports-[backdrop-filter]:bg-gray-950/70'
+          : 'bg-white dark:border-gray-800 dark:bg-gray-950'
       }`}
     >
       <div className="mx-auto flex max-w-7xl min-w-0 items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
@@ -42,16 +51,16 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden items-center gap-8 md:flex nav-family">
-          <Link href="/" className="text-sm font-medium text-gray-700 hover:text-accent">
+          <Link href="/" className={navLinkClass('/')}>
             Home
           </Link>
-          <Link href="/faqs" className="text-sm font-medium text-gray-700 hover:text-accent">
+          <Link href="/faqs" className={navLinkClass('/faqs')}>
             FAQs
           </Link>
-          <Link href="/pricing" className="text-sm font-medium text-gray-700 hover:text-accent">
+          <Link href="/pricing" className={navLinkClass('/pricing')}>
             Pricing
           </Link>
-          <Link href="/#request-demo" className="text-sm font-medium text-gray-700 hover:text-accent">
+          <Link href="/contact" className={navLinkClass('/contact')}>
             Contact Us
           </Link>
         </nav>
@@ -146,16 +155,16 @@ export default function Header() {
       {menuOpen && (
         <div className="border-t border-gray-200 bg-white px-4 py-4 shadow-lg md:hidden">
           <nav className="flex flex-col gap-3 nav-family">
-            <Link href="/" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
+            <Link href="/" className={navLinkClass('/')} onClick={() => setMenuOpen(false)}>
               Home
             </Link>
-            <Link href="/faqs" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
+            <Link href="/faqs" className={navLinkClass('/faqs')} onClick={() => setMenuOpen(false)}>
               FAQs
             </Link>
-            <Link href="/pricing" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
+            <Link href="/pricing" className={navLinkClass('/pricing')} onClick={() => setMenuOpen(false)}>
               Pricing
             </Link>
-            <Link href="/#request-demo" className="text-sm font-medium text-gray-700 hover:text-accent" onClick={() => setMenuOpen(false)}>
+            <Link href="/contact" className={navLinkClass('/contact')} onClick={() => setMenuOpen(false)}>
               Contact Us
             </Link>
           </nav>
