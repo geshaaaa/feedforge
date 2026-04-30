@@ -19,13 +19,24 @@ export default function SiteLogo({
       aria-label="FeedForge home"
     >
       <Image
-        src="/feedforge-logo.png"
-        alt="FeedForge.AI"
-        width={320}
-        height={72}
-        className={`${imgClassName} object-contain object-left`}
+        src="/images/feedforge-triangle.svg"
+        alt="FeedForge logo mark"
+        width={40}
+        height={40}
+        className={`${imgClassName} object-contain object-left dark:hidden`}
         priority
       />
+      <Image
+        src="/images/feedforge-triangle-white.svg"
+        alt="FeedForge logo mark"
+        width={40}
+        height={40}
+        className={`${imgClassName} hidden object-contain object-left dark:block`}
+        priority
+      />
+      <span className="ml-2 text-base font-semibold tracking-tight text-accent dark:text-white sm:text-lg">
+        FeedForge.AI
+      </span>
     </Link>
   )
 }
