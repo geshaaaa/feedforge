@@ -21,16 +21,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 Create a `.env.local` file with:
 
 ```bash
-RESEND_API_KEY=your_resend_api_key
+SENDGRID_API_KEY=your_sendgrid_api_key
 CONTACT_TO_EMAIL=team@yourcompany.com
-RESEND_FROM_EMAIL="onboarding@resend.dev"
+SENDGRID_FROM_EMAIL="verified@yourdomain.com"
 GEMINI_API_KEY=your_gemini_api_key
 GEMINI_MODEL=gemini-3-flash-preview
 ```
 
-For Resend delivery:
-- `RESEND_FROM_EMAIL` must be either `onboarding@resend.dev` (testing) or an address from your verified sending domain.
-- Sending from a personal Gmail address as `from` is typically rejected by Resend.
+For Twilio SendGrid delivery:
+- `SENDGRID_FROM_EMAIL` must be a verified sender identity (single sender or domain-authenticated address) in your SendGrid account.
+- Sending from an unverified address is rejected by SendGrid.
 
 ## Features
 

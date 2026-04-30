@@ -1,4 +1,4 @@
-import { Resend } from 'resend'
+import sgMail from '@sendgrid/mail'
 
 export type EmailFormType = 'demo-request' | 'subscribe' | 'contact'
 
@@ -7,11 +7,13 @@ type SendFormNotificationInput = {
   fields: Record<string, string>
 }
 
-const RESEND_API_KEY = process.env.RESEND_API_KEY
+const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY
 const CONTACT_TO_EMAIL = process.env.CONTACT_TO_EMAIL
-const RESEND_FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'
+const SENDGRID_FROM_EMAIL = process.env.SENDGRID_FROM_EMAIL
 
-const resend = RESEND_API_KEY ? new Resend(RESEND_API_KEY) : null
+if (SENDGRID_API_KEY) {
+  sgMail.setApiKey(SENDGRID_API_KEY)
+}
 
 const SUBJECT_BY_FORM: Record<EmailFormType, string> = {
   'demo-request': 'New demo request submission',
@@ -28,12 +30,16 @@ export function requireText(value: unknown): string {
 }
 
 export async function sendFormNotification({ formType, fields }: SendFormNotificationInput) {
-  if (!resend) {
-    throw new Error('Missing RESEND_API_KEY')
+  if (!SENDGRID_API_KEY) {
+    throw new Error('Missing SENDGRID_API_KEY')
   }
 
   if (!CONTACT_TO_EMAIL) {
     throw new Error('Missing CONTACT_TO_EMAIL')
+  }
+
+  if (!SENDGRID_FROM_EMAIL) {
+    throw new Error('Missing SENDGRID_FROM_EMAIL')
   }
 
   const textBody = Object.entries(fields)
@@ -50,19 +56,16 @@ export async function sendFormNotification({ formType, fields }: SendFormNotific
     </ul>
   `
 
-  const { data, error } = await resend.emails.send({
-    from: RESEND_FROM_EMAIL,
-    to: CONTACT_TO_EMAIL,
-    subject: SUBJECT_BY_FORM[formType],
-    text: `Form: ${formType}\n\n${textBody}`,
-    html: htmlBody,
-  })
-
-  if (error) {
-    throw new Error(`Resend send failed: ${error.message}`)
-  }
-
-  if (!data?.id) {
-    throw new Error('Resend send failed: missing message id in response')
+  try {
+    await sgMail.send({
+      from: SENDGRID_FROM_EMAIL,
+      to: CONTACT_TO_EMAIL,
+      subject: SUBJECT_BY_FORM[formType],
+      text: `Form: ${formType}\n\n${textBody}`,
+      html: htmlBody,
+    })
+  } catch (error) {
+    const message = error instanceof Error ? error.message : 'Unknown SendGrid error'
+    throw new Error(`SendGrid send failed: ${message}`)
   }
 }
