@@ -18,6 +18,20 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+Create a `.env.local` file with:
+
+```bash
+RESEND_API_KEY=your_resend_api_key
+CONTACT_TO_EMAIL=team@yourcompany.com
+RESEND_FROM_EMAIL="onboarding@resend.dev"
+GEMINI_API_KEY=your_gemini_api_key
+GEMINI_MODEL=gemini-3-flash-preview
+```
+
+For Resend delivery:
+- `RESEND_FROM_EMAIL` must be either `onboarding@resend.dev` (testing) or an address from your verified sending domain.
+- Sending from a personal Gmail address as `from` is typically rejected by Resend.
+
 ## Features
 
 - **Hero Section**: Clean, modern design with value proposition and interactive charts

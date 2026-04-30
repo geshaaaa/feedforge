@@ -9,6 +9,9 @@ export default function DemoRequest() {
     company: '',
     message: '',
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [statusMessage, setStatusMessage] = useState('')
+  const [statusType, setStatusType] = useState<'success' | 'error' | ''>('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -17,11 +20,37 @@ export default function DemoRequest() {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    setFormData({ name: '', email: '', company: '', message: '' })
+    setIsSubmitting(true)
+    setStatusMessage('')
+    setStatusType('')
+
+    try {
+      const response = await fetch('/api/demo-request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        setStatusType('error')
+        setStatusMessage(result.message || 'Could not send demo request. Please try again.')
+        return
+      }
+
+      setStatusType('success')
+      setStatusMessage('Thanks! Your demo request has been sent.')
+      setFormData({ name: '', email: '', company: '', message: '' })
+    } catch (error) {
+      console.error('Demo request submit failed', error)
+      setStatusType('error')
+      setStatusMessage('Network error. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -94,10 +123,16 @@ export default function DemoRequest() {
 
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full border border-accent bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#070066]"
               >
-                Submit Request
+                {isSubmitting ? 'Submitting...' : 'Submit Request'}
               </button>
+              {statusMessage ? (
+                <p className={`text-sm ${statusType === 'error' ? 'text-red-600' : 'text-green-600'}`}>
+                  {statusMessage}
+                </p>
+              ) : null}
             </form>
           </div>
 

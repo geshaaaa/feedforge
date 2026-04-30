@@ -6,6 +6,14 @@ export default function CatalogPerfection() {
   const [activeTab, setActiveTab] = useState<'examples' | 'try'>('examples')
   const [productTitle, setProductTitle] = useState('')
   const [description, setDescription] = useState('')
+  const [isGenerating, setIsGenerating] = useState(false)
+  const [statusMessage, setStatusMessage] = useState('')
+  const [statusType, setStatusType] = useState<'success' | 'error' | ''>('')
+  const [generatedOutput, setGeneratedOutput] = useState<{
+    optimizedTitle: string
+    optimizedDescription: string
+    tags: string[]
+  } | null>(null)
 
   const exampleData = {
     rawTitle: 'Blue Shirt L',
@@ -15,9 +23,43 @@ export default function CatalogPerfection() {
     tags: ["MEN'S FASHION", 'FORMAL WEAR', 'SUMMER COLLECTION', 'SUSTAINABLE'],
   }
 
-  const handleGenerate = () => {
-    // This would typically call an API
-    console.log('Generating AI feed...')
+  const handleGenerate = async () => {
+    setIsGenerating(true)
+    setStatusMessage('')
+    setStatusType('')
+    setGeneratedOutput(null)
+
+    try {
+      const response = await fetch('/api/try-product', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          productTitle,
+          description,
+        }),
+      })
+      const result = await response.json()
+
+      if (!response.ok) {
+        setStatusType('error')
+        setStatusMessage(result.message || 'Could not generate AI feed. Please try again.')
+        return
+      }
+
+      setGeneratedOutput({
+        optimizedTitle: result.optimizedTitle,
+        optimizedDescription: result.optimizedDescription,
+        tags: result.tags || [],
+      })
+      setStatusType('success')
+      setStatusMessage('AI feed generated successfully.')
+    } catch (error) {
+      console.error('Try product generation failed', error)
+      setStatusType('error')
+      setStatusMessage('Network error. Please try again.')
+    } finally {
+      setIsGenerating(false)
+    }
   }
 
   return (
@@ -178,20 +220,60 @@ export default function CatalogPerfection() {
 
                     <button
                       onClick={handleGenerate}
+                      disabled={isGenerating}
                       className="group flex w-full items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#070066]"
                     >
                       <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                       </svg>
-                      GENERATE AI FEED
+                      {isGenerating ? 'GENERATING...' : 'GENERATE AI FEED'}
                     </button>
 
-                    <div className="flex items-center justify-center gap-2 text-sm text-gray-400">
-                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                      </svg>
-                      <span>Enter product details to see the magic.</span>
-                    </div>
+                    {statusMessage ? (
+                      <p className={`text-center text-sm ${statusType === 'error' ? 'text-red-600' : 'text-green-600'}`}>
+                        {statusMessage}
+                      </p>
+                    ) : (
+                      <div className="flex items-center justify-center gap-2 text-sm text-gray-400">
+                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                        <span>Enter product details to see the magic.</span>
+                      </div>
+                    )}
+
+                    {generatedOutput ? (
+                      <div>
+                        <div className="mb-2 flex items-center gap-2">
+                          <svg className="h-4 w-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                          <label className="text-xs font-semibold uppercase tracking-wider text-accent">
+                            AI OUTPUT PREVIEW
+                          </label>
+                        </div>
+                        <div className="space-y-4 rounded-lg border border-gray-200 bg-gray-50 p-4">
+                          <div>
+                            <div className="mb-2 break-words text-base font-bold text-accent sm:text-lg">
+                              {generatedOutput.optimizedTitle}
+                            </div>
+                            <div className="mb-4 text-sm leading-relaxed text-gray-700">
+                              {generatedOutput.optimizedDescription}
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                              {generatedOutput.tags.map((tag, index) => (
+                                <span
+                                  key={`${tag}-${index}`}
+                                  className="rounded-md bg-accent/10 px-3 py-1 text-xs font-medium text-accent"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : null}
                   </div>
                 )}
               </div>

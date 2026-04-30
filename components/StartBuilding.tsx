@@ -4,12 +4,40 @@ import { useState } from 'react'
 
 export default function StartBuilding() {
   const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [statusMessage, setStatusMessage] = useState('')
+  const [statusType, setStatusType] = useState<'success' | 'error' | ''>('')
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle subscription logic here
-    console.log('Subscribing with email:', email)
-    setEmail('')
+    setIsSubmitting(true)
+    setStatusMessage('')
+    setStatusType('')
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      const result = await response.json()
+
+      if (!response.ok) {
+        setStatusType('error')
+        setStatusMessage(result.message || 'Could not subscribe. Please try again.')
+        return
+      }
+
+      setStatusType('success')
+      setStatusMessage('Subscribed successfully.')
+      setEmail('')
+    } catch (error) {
+      console.error('Subscribe submit failed', error)
+      setStatusType('error')
+      setStatusMessage('Network error. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -60,12 +88,18 @@ export default function StartBuilding() {
               />
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full shrink-0 border border-t-0 border-accent bg-accent px-6 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#070066] sm:w-auto sm:border-l-0 sm:border-t sm:border-accent"
               >
-                Subscribe
+                {isSubmitting ? 'Submitting...' : 'Subscribe'}
               </button>
             </form>
           </div>
+          {statusMessage ? (
+            <p className={`mt-2 text-center text-sm ${statusType === 'error' ? 'text-red-600' : 'text-green-600'}`}>
+              {statusMessage}
+            </p>
+          ) : null}
         </div>
       </div>
     </section>
