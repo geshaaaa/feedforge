@@ -6,6 +6,7 @@ import SiteLogo from '@/components/SiteLogo'
 
 const footerLinks = [
   { href: '/', label: 'Home' },
+  { href: '/faqs', label: 'FAQs' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/#request-demo', label: 'Get Started' },
 ] as const
@@ -70,6 +71,7 @@ function linkIsActive(pathname: string, href: string) {
 
 export default function Footer() {
   const pathname = usePathname()
+  const currentYear = new Date().getFullYear()
 
   return (
     <footer className="mt-auto border-t border-gray-200 bg-white">
@@ -78,7 +80,8 @@ export default function Footer() {
           <div className="min-w-0">
             <SiteLogo imgClassName="h-8 w-auto sm:h-9" />
             <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-600">
-              AI-optimized product feeds for search, social, and AI-powered discovery.
+              AI-powered product feed management to import, optimize, validate, and export from one
+              dashboard.
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-2">
               {socialLinks.map((social) => (
@@ -100,7 +103,7 @@ export default function Footer() {
           >
             <h3
               id="footer-quick-links-heading"
-              className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500"
+              className="mb-2 text-xs font-bold uppercase tracking-wide text-gray-500"
             >
               Quick links
             </h3>
@@ -111,15 +114,12 @@ export default function Footer() {
                   <li key={`${href}-${label}`}>
                     <Link
                       href={href}
-                      className="flex items-center gap-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-accent"
+                      className={`flex items-center rounded-md px-3 py-2 text-sm transition-colors ${
+                        active
+                          ? 'font-semibold text-accent'
+                          : 'font-medium text-gray-700 hover:bg-gray-50 hover:text-accent'
+                      }`}
                     >
-                      <span className="flex w-4 shrink-0 justify-center" aria-hidden>
-                        {active ? (
-                          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                        ) : (
-                          <span className="block h-1.5 w-1.5" />
-                        )}
-                      </span>
                       {label}
                     </Link>
                   </li>
@@ -127,6 +127,11 @@ export default function Footer() {
               })}
             </ul>
           </nav>
+        </div>
+        <div className="mt-10 border-t border-gray-200 pt-5">
+          <p className="text-xs text-gray-500">
+            Copyright {currentYear} FeedForge. Built for reliable, production-ready feed operations.
+          </p>
         </div>
       </div>
     </footer>

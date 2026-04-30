@@ -115,7 +115,7 @@ export default function DemoRequest() {
             </div>
 
             <h3 className="mb-4 text-xl font-bold text-gray-900 lg:text-2xl">
-              See Feedforge in action
+              See FeedForge in Action
             </h3>
 
             <p className="mb-6 text-sm text-gray-600 sm:text-base">
@@ -130,7 +130,7 @@ export default function DemoRequest() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="mb-1 text-sm font-semibold text-gray-900">Personalized walkthrough</h4>
+                  <h4 className="mb-1 text-sm font-semibold text-gray-900">Personalized Walkthrough</h4>
                   <p className="text-sm text-gray-600">See how Feedforge works for your specific use case</p>
                 </div>
               </div>
@@ -142,7 +142,7 @@ export default function DemoRequest() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="mb-1 text-sm font-semibold text-gray-900">Expert guidance</h4>
+                  <h4 className="mb-1 text-sm font-semibold text-gray-900">Expert Guidance</h4>
                   <p className="text-sm text-gray-600">Get answers to your questions from our team</p>
                 </div>
               </div>
@@ -154,7 +154,7 @@ export default function DemoRequest() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="mb-1 text-sm font-semibold text-gray-900">No commitment</h4>
+                  <h4 className="mb-1 text-sm font-semibold text-gray-900">No Commitment</h4>
                   <p className="text-sm text-gray-600">Explore our platform with no strings attached</p>
                 </div>
               </div>

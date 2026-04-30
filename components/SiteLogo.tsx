@@ -34,8 +34,8 @@ export default function SiteLogo({
         className={`${imgClassName} hidden object-contain object-left dark:block`}
         priority
       />
-      <span className="ml-2 text-base font-semibold tracking-tight text-accent dark:text-white sm:text-lg">
-        FeedForge.AI
+      <span className="ml-2 text-base font-light uppercase tracking-[0.14em] text-[#586487] dark:text-white sm:text-lg">
+        FEEDFORGE.AI
       </span>
     </Link>
   )

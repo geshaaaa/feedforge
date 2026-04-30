@@ -27,7 +27,7 @@ export default function CatalogPerfection() {
           {/* Left Column */}
           <div className="flex min-w-0 flex-col justify-center">
             <h2 className="mb-4 text-balance text-xl font-bold leading-tight text-gray-900 sm:text-2xl md:text-3xl lg:text-4xl">
-              instant catalog <span className="text-accent">perfection</span>
+              Instant Catalog <span className="text-accent">Perfection</span>
             </h2>
             
             <p className="mb-6 text-sm leading-relaxed text-gray-700">
@@ -36,7 +36,7 @@ export default function CatalogPerfection() {
 
             {/* Why it matters card */}
             <div className="group border border-gray-200 bg-gray-50 p-6 transition-all duration-700 ease-in-out hover:border-accent hover:shadow-xl hover:-translate-y-1">
-              <h3 className="mb-3 text-base font-semibold text-accent">Why it matters</h3>
+              <h3 className="mb-3 text-base font-semibold text-accent">Why It Matters</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">

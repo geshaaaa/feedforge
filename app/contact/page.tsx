@@ -4,7 +4,8 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Contact Us · FeedForge',
-  description: 'Get in touch with the FeedForge team to discuss your catalog, channels, and onboarding plan.',
+  description:
+    'Contact the FeedForge team for help with onboarding, feed quality, channel delivery, and scale planning.',
 }
 
 export default function ContactPage() {
@@ -21,11 +22,11 @@ export default function ContactPage() {
                 </span>
               </div>
               <h1 className="text-3xl font-bold leading-tight text-gray-900 lg:text-4xl">
-                Let&apos;s talk about your <span className="text-accent">product feeds</span>
+                Let&apos;s Improve Your <span className="text-accent">Product Feeds</span>
               </h1>
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-gray-600 lg:text-base">
-                Share your catalog size, channels, and current workflow. Our team will reach out with
-                recommendations and next steps.
+                Tell us about your catalog, channels, and current workflow. We&apos;ll follow up with
+                practical recommendations, implementation guidance, and clear next steps.
               </p>
 
               <div className="mt-8 space-y-4 text-sm text-gray-700">
@@ -54,7 +55,7 @@ export default function ContactPage() {
                     type="text"
                     required
                     className="w-full border border-gray-300 px-3 py-2.5 text-sm text-gray-900 outline-none transition-colors focus:border-accent"
-                    placeholder="Enter your name"
+                    placeholder="Jane Doe"
                   />
                 </div>
 
@@ -81,13 +82,13 @@ export default function ContactPage() {
                     name="company"
                     type="text"
                     className="w-full border border-gray-300 px-3 py-2.5 text-sm text-gray-900 outline-none transition-colors focus:border-accent"
-                    placeholder="Your company"
+                    placeholder="Acme Commerce"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="mb-2 block text-sm font-medium text-gray-900">
-                    How can we help?
+                    What Would You Like Help With?
                   </label>
                   <textarea
                     id="message"
@@ -95,7 +96,7 @@ export default function ContactPage() {
                     rows={5}
                     required
                     className="w-full resize-y border border-gray-300 px-3 py-2.5 text-sm text-gray-900 outline-none transition-colors focus:border-accent"
-                    placeholder="Tell us about your channels, feed challenges, and goals."
+                    placeholder="Share your channels, catalog size, feed issues, and goals."
                   />
                 </div>
 
@@ -103,7 +104,7 @@ export default function ContactPage() {
                   type="submit"
                   className="w-full border border-accent bg-accent px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#070066]"
                 >
-                  Send Message
+                  Submit Request
                 </button>
               </form>
             </div>

@@ -74,7 +74,7 @@ export default function RelevanceDelivered() {
             SEARCH
           </div>
           <h2 className="mb-4 text-3xl font-bold text-gray-900 lg:text-4xl">
-            Relevance, delivered
+            Relevance, Delivered
           </h2>
           <p className="text-lg text-gray-600">
             Advanced retrieval capabilities for precise search across dynamic datasets.
